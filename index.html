@@ -20,8 +20,8 @@
   --bg-2:#0c1a10;
   --bg-3:#10241a;
   --cream:#f2ecd9;
-  --cream-60:rgba(242,236,217,.60);
-  --cream-38:rgba(242,236,217,.38);
+  --cream-60:rgba(242,236,217,.74);
+  --cream-38:rgba(242,236,217,.54);
   --cream-18:rgba(242,236,217,.16);
   --gold:#d9b671;
   --gold-hi:#f4dda2;
@@ -126,10 +126,9 @@ img{max-width:100%;display:block;}
   transform:scaleX(0);transform-origin:left;
 }
 .nav-logo{display:flex;align-items:center;gap:12px;}
-.nav-logo svg{width:30px;height:30px;}
+.nav-logo svg{width:38px;height:38px;}
 .nav-logo-text{display:flex;flex-direction:column;line-height:1.1;}
-.nav-logo-text b{font-family:var(--font-d);font-weight:500;font-size:15px;letter-spacing:.14em;}
-.nav-logo-text small{font-family:var(--font-m);font-size:8.5px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;}
+.nav-logo-text b{font-family:var(--font-d);font-weight:500;font-size:17px;letter-spacing:.12em;}
 .nav-links{display:flex;gap:clamp(18px,3vw,40px);align-items:center;}
 .nav-link{
   font-family:var(--font-m);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
@@ -260,7 +259,7 @@ img{max-width:100%;display:block;}
 .track-card:hover::before{opacity:1;}
 .track-card:hover{border-color:rgba(217,182,113,.45);}
 .track-card .tc-num{
-  font-family:var(--font-m);font-size:10px;letter-spacing:.3em;color:var(--gold);margin-bottom:22px;
+  font-family:var(--font-m);font-size:10.5px;letter-spacing:.3em;color:var(--gold);margin-bottom:22px;
   display:flex;justify-content:space-between;align-items:center;
 }
 .track-card .tc-arrow{
@@ -272,7 +271,7 @@ img{max-width:100%;display:block;}
 .track-card h3{font-family:var(--font-d);font-weight:400;font-size:clamp(20px,1.9vw,27px);line-height:1.15;margin-bottom:8px;}
 .track-card p{font-size:13.5px;color:var(--cream-60);max-width:34ch;}
 .track-card .tc-tag{
-  display:inline-block;margin-top:16px;font-family:var(--font-m);font-size:9.5px;
+  display:inline-block;margin-top:16px;font-family:var(--font-m);font-size:10.5px;
   letter-spacing:.24em;text-transform:uppercase;color:var(--cream-38);
 }
 .track-card.alt:hover{border-color:rgba(167,139,250,.5);}
@@ -284,7 +283,7 @@ img{max-width:100%;display:block;}
 .hero-scrollcue{
   position:absolute;right:clamp(20px,6vw,96px);bottom:clamp(40px,6vh,72px);z-index:2;
   display:flex;flex-direction:column;align-items:center;gap:12px;
-  font-family:var(--font-m);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-38);
+  font-family:var(--font-m);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-38);
   writing-mode:vertical-rl;
 }
 .hero-scrollcue i{width:1px;height:64px;background:var(--cream-18);position:relative;overflow:hidden;}
@@ -311,7 +310,7 @@ img{max-width:100%;display:block;}
   color:var(--gold);line-height:1;display:flex;align-items:baseline;
 }
 .stat-num .suffix{font-size:.55em;margin-left:2px;color:var(--gold-hi);}
-.stat-label{margin-top:12px;font-family:var(--font-m);font-size:10px;letter-spacing:.22em;
+.stat-label{margin-top:12px;font-family:var(--font-m);font-size:11px;letter-spacing:.2em;
   text-transform:uppercase;color:var(--cream-38);line-height:1.7;}
 
 /* ============================================================
@@ -339,7 +338,7 @@ img{max-width:100%;display:block;}
 .track-head .lede{margin-top:8px;}
 .chip-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
 .chip{
-  font-family:var(--font-m);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  font-family:var(--font-m);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
   padding:9px 16px;border-radius:100px;border:1px solid var(--line);color:var(--cream-60);
   transition:border-color .3s,color .3s,background .3s;
 }
@@ -370,7 +369,7 @@ img{max-width:100%;display:block;}
 .feat h4{font-family:var(--font-d);font-weight:400;font-size:22px;margin:26px 0 10px;transform:translateZ(24px);}
 .feat p{font-size:14px;color:var(--cream-60);transform:translateZ(18px);}
 .feat .feat-num{
-  position:absolute;top:26px;right:28px;font-family:var(--font-m);font-size:10px;
+  position:absolute;top:26px;right:28px;font-family:var(--font-m);font-size:10.5px;
   letter-spacing:.25em;color:var(--cream-38);
 }
 
@@ -383,7 +382,7 @@ img{max-width:100%;display:block;}
   transition:border-color .3s,background .3s;
 }
 .btn-ghost:hover{border-color:var(--gold);background:rgba(217,182,113,.07);}
-.cta-note{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;color:var(--cream-38);text-transform:uppercase;}
+.cta-note{font-family:var(--font-m);font-size:11px;letter-spacing:.12em;color:var(--cream-38);text-transform:uppercase;}
 
 /* ---------- marquee ---------- */
 .marquee-wrap{
@@ -435,8 +434,8 @@ img{max-width:100%;display:block;}
 .proof-amount{font-family:var(--font-d);font-weight:300;font-size:clamp(30px,3vw,44px);color:var(--gold);}
 .proof-card p{margin-top:8px;font-size:14px;color:var(--cream-60);}
 .proof-card .proof-tag{
-  display:inline-block;margin-top:18px;font-family:var(--font-m);font-size:9.5px;
-  letter-spacing:.24em;text-transform:uppercase;padding:6px 12px;border-radius:100px;
+  display:inline-block;margin-top:18px;font-family:var(--font-m);font-size:10.5px;
+  letter-spacing:.22em;text-transform:uppercase;padding:6px 12px;border-radius:100px;
   border:1px solid var(--line);color:var(--cream-38);
 }
 
@@ -487,7 +486,7 @@ img{max-width:100%;display:block;}
   background:linear-gradient(0deg,rgba(5,10,7,.85),transparent);
 }
 .portrait figcaption b{font-family:var(--font-d);font-weight:500;font-size:19px;display:block;}
-.portrait figcaption small{font-family:var(--font-m);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);}
+.portrait figcaption small{font-family:var(--font-m);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
 .about-body p{color:var(--cream-60);font-size:clamp(15px,1.3vw,17px);margin-bottom:20px;max-width:60ch;}
 .about-body p b{color:var(--cream);font-weight:400;}
 .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:34px 0 40px;}
@@ -495,7 +494,7 @@ img{max-width:100%;display:block;}
   border:1px solid var(--line-soft);border-radius:14px;padding:20px 18px;text-align:center;
 }
 .pillar b{font-family:var(--font-d);font-style:italic;font-weight:400;font-size:17px;color:var(--gold);display:block;margin-bottom:4px;}
-.pillar span{font-family:var(--font-m);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-38);}
+.pillar span{font-family:var(--font-m);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-38);}
 .partner-strip{
   margin-top:26px;display:flex;gap:20px;align-items:center;padding:22px 26px;border-radius:18px;
   border:1px solid var(--line-soft);background:rgba(16,36,26,.35);
@@ -536,7 +535,7 @@ img{max-width:100%;display:block;}
   transition:background .3s;
 }
 .news-form button:hover{background:var(--gold-hi);}
-.news-note{margin-top:18px;font-family:var(--font-m);font-size:10px;letter-spacing:.18em;
+.news-note{margin-top:18px;font-family:var(--font-m);font-size:11px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--cream-38);}
 
 /* ============================================================
@@ -555,9 +554,9 @@ img{max-width:100%;display:block;}
   display:flex;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line-soft);
   font-size:15px;color:var(--cream-60);
 }
-.book-point i{font-family:var(--font-m);font-style:normal;font-size:10px;letter-spacing:.2em;color:var(--gold);}
+.book-point i{font-family:var(--font-m);font-style:normal;font-size:10.5px;letter-spacing:.2em;color:var(--gold);}
 .field{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
-.field label{font-family:var(--font-m);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--cream-38);}
+.field label{font-family:var(--font-m);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--cream-38);}
 .field input{
   background:rgba(5,10,7,.5);border:1px solid var(--line-soft);border-radius:12px;
   padding:14px 16px;color:var(--cream);font-family:var(--font-b);font-size:15px;font-weight:300;
@@ -582,7 +581,7 @@ img{max-width:100%;display:block;}
   box-shadow:0 24px 60px rgba(0,0,0,.4);}
 .cal-card .cc-top{
   display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;
-  font-family:var(--font-m);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
+  font-family:var(--font-m);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);
 }
 .cal-card .tc-arrow{
   width:40px;height:40px;border-radius:50%;border:1px solid var(--line);
@@ -595,7 +594,7 @@ img{max-width:100%;display:block;}
 .cal-card p{font-size:14px;color:var(--cream-60);max-width:44ch;}
 .cal-card .cc-foot{
   margin-top:20px;display:flex;align-items:center;gap:10px;
-  font-family:var(--font-m);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--cream-38);
+  font-family:var(--font-m);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-38);
 }
 .cal-card .cc-foot::before{content:"";width:22px;height:1px;background:var(--gold);}
 .cal-card.alt::before{
@@ -606,7 +605,7 @@ img{max-width:100%;display:block;}
 .cal-card.alt h3 em{color:var(--violet);}
 .cal-card.alt:hover .tc-arrow{background:var(--violet);}
 .cal-card.alt .cc-foot::before{background:var(--violet);}
-.book-foot{margin-top:18px;text-align:center;font-family:var(--font-m);font-size:9.5px;
+.book-foot{margin-top:18px;text-align:center;font-family:var(--font-m);font-size:10.5px;
   letter-spacing:.2em;text-transform:uppercase;color:var(--cream-38);}
 .book-foot a{color:var(--gold);}
 
@@ -623,13 +622,13 @@ img{max-width:100%;display:block;}
 .footer-word:hover{color:rgba(217,182,113,.9);}
 .footer-disclaimer{
   margin-top:clamp(32px,4vw,48px);max-width:78ch;
-  font-size:12.5px;line-height:1.8;color:var(--cream-38);
+  font-size:13.5px;line-height:1.8;color:var(--cream-60);
 }
 .footer-disclaimer b{color:var(--cream-60);font-weight:400;}
 .footer-cols{
   margin-top:clamp(40px,5vw,64px);display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;
   padding-top:30px;border-top:1px solid var(--line-soft);
-  font-family:var(--font-m);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-38);
+  font-family:var(--font-m);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-38);
 }
 .footer-cols a{transition:color .3s;}
 .footer-cols a:hover{color:var(--gold);}
@@ -653,7 +652,6 @@ img{max-width:100%;display:block;}
 @media (max-width:760px){
   .nav-link{display:none;}           /* text links collapse… */
   .btn-book{padding:12px 20px;}      /* …but Book a Call never leaves the nav */
-  .nav-logo-text small{display:none;}
   .hero-tracks{grid-template-columns:1fr;}
   .hero-scrollcue{display:none;}
   .pillars{grid-template-columns:1fr;}
@@ -721,7 +719,7 @@ img{max-width:100%;display:block;}
       <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(180 100 100)"/>
       <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(270 100 100)"/>
     </svg>
-    <span class="nav-logo-text"><b>IMPACT EARNINGS</b><small>Where capital meets alignment</small></span>
+    <span class="nav-logo-text"><b>IMPACT EARNINGS</b></span>
   </a>
   <div class="nav-links">
     <a href="#earnings" class="nav-link" data-hover>Impact Earnings</a>
@@ -1116,9 +1114,12 @@ addEventListener("scroll", () => {
   navProgress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
 }, { passive: true });
 
-/* ---------- reveal observer ---------- */
+/* ---------- reveal observer ----------
+   Toggles rather than fires once: every section replays its entrance each
+   time it crosses into view, in either scroll direction, for as long as
+   the page is open — never just a one-shot on first load. */
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  entries.forEach(e => e.target.classList.toggle("in", e.isIntersecting));
 }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
 document.querySelectorAll("[data-reveal],[data-reveal-stagger]").forEach(el => io.observe(el));
 /* stagger children delays */
@@ -1127,15 +1128,20 @@ document.querySelectorAll("[data-reveal-stagger]").forEach(group => {
 });
 
 /* ---------- counters ---------- */
+/* replays with the rest of the stat card every time it re-enters view;
+   resets to 0 the moment it scrolls off, so it always counts up fresh */
 const counterIO = new IntersectionObserver(entries => {
   entries.forEach(e => {
-    if (!e.isIntersecting) return;
-    counterIO.unobserve(e.target);
-    const el = e.target, end = +el.dataset.count, dur = 1800, t0 = performance.now();
+    const el = e.target;
+    if (!e.isIntersecting) { el.textContent = "0"; el._counting = false; return; }
+    if (el._counting) return;
+    el._counting = true;
+    const end = +el.dataset.count, dur = 1800, t0 = performance.now();
     (function tick(t){
+      if (!el._counting) return;               // abandoned mid-count — scrolled away
       const p = Math.min((t - t0) / dur, 1);
       el.textContent = Math.round(end * (1 - Math.pow(1 - p, 4)));
-      if (p < 1) requestAnimationFrame(tick);
+      if (p < 1) requestAnimationFrame(tick); else el._counting = false;
     })(t0);
   });
 }, { threshold: 0.5 });
@@ -1276,10 +1282,14 @@ if (!isTouch && !prefersReduced) {
       if (depth === 0 || len < 2) return;
       const x2 = x + Math.cos(angle) * len;
       const y2 = y + Math.sin(angle) * len;
-      branches.push({ x1:x, y1:y, x2, y2, depth, order });
+      /* a small random jitter per branch, baked in once, keeps dozens of
+         filaments at the same recursion depth from popping in lockstep —
+         the field blooms in loosely instead of snapping tier by tier */
+      branches.push({ x1:x, y1:y, x2, y2, depth, order, jitter: Math.random()*320 });
       if (depth <= 2 && Math.random() < 0.5)
         leaves.push({ x:x2, y:y2, r: 2 + Math.random()*5,
-          phase: Math.random()*Math.PI*2, violet: Math.random() < 0.16, order });
+          phase: Math.random()*Math.PI*2, violet: Math.random() < 0.16, order,
+          jitter: Math.random()*320 });
       const forks = Math.random() < 0.3 ? 3 : 2;
       for (let i = 0; i < forks; i++){
         const spread = (i - (forks-1)/2) * (0.5 + Math.random()*0.25) + (Math.random()-.5)*0.2;
@@ -1319,32 +1329,41 @@ if (!isTouch && !prefersReduced) {
   setTimeout(window.__startTree, 3500);              // fallback if load event stalls
   const GROW_MS = prefersReduced ? 1 : 3400;
 
+  const easeOut = p => 1 - Math.pow(1 - p, 3);        // gentle deceleration, no snap
+
   function frame(t){
     ctx.clearRect(0, 0, W, H);
     const elapsed = start === null ? 0 : t - start;
     if (elapsed > 0){
-      /* filaments — each constellation unfurls branch by branch */
+      /* the whole field washes in as one atmosphere first, so individual
+         filaments never feel like they're popping onto a bare sky */
+      const fieldIn = easeOut(Math.min(1, elapsed / 1400));
+      /* filaments — each constellation unfurls branch by branch, both its
+         length AND its opacity easing in together for a soft bloom */
       for (const b of branches){
-        const revealAt = b.order * (GROW_MS / 9);
-        let p = (elapsed - revealAt) / 420;
+        const revealAt = b.order * (GROW_MS / 9) + b.jitter;
+        let p = (elapsed - revealAt) / 640;
         if (p <= 0) continue;
         p = Math.min(p, 1);
+        const drawP = easeOut(p);
         const w1 = driftAt(b.x1, b.y1, t), w2 = driftAt(b.x2, b.y2, t);
-        const alpha = (0.028 + b.depth * 0.02) * (0.8 + 0.2*Math.sin(t*0.0012 + b.order));
+        const alpha = (0.028 + b.depth * 0.02) * (0.8 + 0.2*Math.sin(t*0.0012 + b.order))
+                      * easeOut(p) * fieldIn;
         ctx.strokeStyle = `rgba(${b.depth > 3 ? GOLD : HI},${alpha})`;
         ctx.lineWidth = Math.max(0.4, (b.depth - 1) * 0.38);
         ctx.beginPath();
         ctx.moveTo(b.x1 + w1, b.y1);
-        ctx.lineTo(b.x1 + w1 + (b.x2 + w2 - b.x1 - w1) * p, b.y1 + (b.y2 - b.y1) * p);
+        ctx.lineTo(b.x1 + w1 + (b.x2 + w2 - b.x1 - w1) * drawP, b.y1 + (b.y2 - b.y1) * drawP);
         ctx.stroke();
       }
-      /* firefly tips — strobing glow at the end of every filament */
+      /* firefly tips — glow up gradually rather than blinking on */
       for (const lf of leaves){
-        const revealAt = 250 + lf.order * (GROW_MS / 9);
-        if (elapsed < revealAt) continue;
+        const revealAt = 250 + lf.order * (GROW_MS / 9) + lf.jitter;
+        const fade = easeOut(Math.min(1, Math.max(0, (elapsed - revealAt) / 500)));
+        if (fade <= 0) continue;
         const tw = 0.2 + 0.8 * Math.abs(Math.sin(t*0.0014 + lf.phase));
         const w = driftAt(lf.x, lf.y, t);
-        ctx.globalAlpha = Math.min(1, 0.7 * tw);
+        ctx.globalAlpha = Math.min(1, 0.7 * tw) * fade * fieldIn;
         ctx.drawImage(lf.violet ? glowViolet : glowGold,
           lf.x + w - lf.r, lf.y - lf.r, lf.r*2, lf.r*2);
       }
