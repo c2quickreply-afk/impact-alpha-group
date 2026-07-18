@@ -143,6 +143,9 @@ img{max-width:100%;display:block;}
 }
 .nav-link:hover{color:var(--cream);}
 .nav-link:hover::after{transform:scaleX(1);transform-origin:left;}
+.nav-link.accent{color:var(--gold);border:1px solid rgba(217,182,113,.45);padding:8px 16px;border-radius:100px;}
+.nav-link.accent::after{display:none;}
+.nav-link.accent:hover{color:var(--bg-0);background:var(--gold);}
 .btn-book{
   position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;
   font-family:var(--font-m);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
@@ -539,6 +542,7 @@ img{max-width:100%;display:block;}
   transition:background .3s;
 }
 .news-form button:hover{background:var(--gold-hi);}
+.news-cta{margin:44px auto 0;}
 .news-note{margin-top:18px;font-family:var(--font-m);font-size:11px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--cream-38);}
 
@@ -731,7 +735,8 @@ img{max-width:100%;display:block;}
     <a href="#sectors" class="nav-link" data-hover>Sectors</a>
     <a href="#approach" class="nav-link" data-hover>Approach</a>
     <a href="#about" class="nav-link" data-hover>About</a>
-    <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" class="nav-link" data-hover>Webinar</a>
+    <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="nav-link accent" data-hover>Newsletter</a>
+    <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" class="nav-link accent" data-hover>Webinar</a>
     <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Book a Call <span class="arr">→</span></a>
   </div>
 </nav>
@@ -1015,10 +1020,9 @@ img{max-width:100%;display:block;}
 <section class="section newsletter" id="briefing">
   <div class="overline center" data-reveal>The Alpha Briefing</div>
   <h2 class="h-lg" data-reveal>Not ready to talk? <em>Watch the work unfold.</em></h2>
-  <form class="news-form" data-reveal onsubmit="event.preventDefault();this.querySelector('button').textContent='Planted ✓'">
-    <input type="email" placeholder="Your email address" required aria-label="Email address">
-    <button type="submit" data-hover>Subscribe</button>
-  </form>
+  <div class="news-cta" data-reveal>
+    <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Join the newsletter <span class="arr">→</span></a>
+  </div>
   <p class="news-note" data-reveal>Occasional field notes on capital, community & carbon · no noise · unsubscribe anytime</p>
 </section>
 
