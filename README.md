@@ -1,7 +1,9 @@
-# Impact Earnings — Where Capital Meets Alignment
+# Impact Alpha — Where Capital Meets Alignment
 
-Marketing site for **Impact Earnings** and **Impact Alpha Group**, the capital-strategy and
-education practice led by Francene Loomiller.
+Marketing site for **Impact Alpha** — home to the **Impact Earnings** and **Impact Alpha
+Group** tracks — the capital-strategy and education practice led by Francene Loomiller.
+
+Deployed via Vercel from this repository to impactearnings.com and impactalphagroup.com.
 
 The entire site is a single self-contained file — [`index.html`](index.html) — with no build
 step and no dependencies beyond Google Fonts. Open it in a browser, or serve it with any
