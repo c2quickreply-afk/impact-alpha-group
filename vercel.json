@@ -1,0 +1,40 @@
+{
+  "redirects": [
+    {
+      "source": "/webinar",
+      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
+      "destination": "https://go.impactearnings.com/register-3624",
+      "permanent": false
+    },
+    {
+      "source": "/webinar/",
+      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
+      "destination": "https://go.impactearnings.com/register-3624",
+      "permanent": false
+    },
+    {
+      "source": "/newsletter",
+      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
+      "destination": "https://go.impactearnings.com/home-303039",
+      "permanent": false
+    },
+    {
+      "source": "/newsletter/",
+      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
+      "destination": "https://go.impactearnings.com/home-303039",
+      "permanent": false
+    },
+    {
+      "source": "/chatwithfrancene",
+      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
+      "destination": "https://go.impactearnings.com/chatwithfrancene",
+      "permanent": false
+    },
+    {
+      "source": "/chatwithfrancene/",
+      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
+      "destination": "https://go.impactearnings.com/chatwithfrancene",
+      "permanent": false
+    }
+  ]
+}
