@@ -1,4 +1,11 @@
 {
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "(www\\.)?impactalphagroup\\.com" }],
+      "destination": "/alpha.html"
+    }
+  ],
   "redirects": [
     {
       "source": "/webinar",
@@ -34,6 +41,24 @@
       "source": "/chatwithfrancene/",
       "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
       "destination": "https://go.impactearnings.com/chatwithfrancene",
+      "permanent": false
+    },
+    {
+      "source": "/alpha.html",
+      "has": [{ "type": "host", "value": "(www\\.)?impactalphagroup\\.com" }],
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/index.html",
+      "has": [{ "type": "host", "value": "(www\\.)?impactalphagroup\\.com" }],
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/alpha.html",
+      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
+      "destination": "https://impactalphagroup.com/",
       "permanent": false
     }
   ]
