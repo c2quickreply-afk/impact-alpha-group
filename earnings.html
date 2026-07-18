@@ -539,6 +539,18 @@ img{max-width:100%;display:block;}
 }
 .news-form button:hover{background:var(--gold-hi);}
 .news-cta{margin:44px auto 0;}
+.contact-form{max-width:640px;margin:44px auto 0;display:flex;flex-direction:column;gap:14px;text-align:left;}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.contact-form input,.contact-form textarea{
+  background:rgba(5,10,7,.6);border:1px solid var(--line);border-radius:18px;
+  padding:16px 22px;color:var(--cream);font-family:var(--font-b);font-size:15px;
+  font-weight:300;outline:none;transition:border-color .3s,box-shadow .3s;resize:vertical;
+}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);box-shadow:0 0 34px rgba(217,182,113,.12);}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--cream-38);}
+.contact-form button{align-self:center;margin-top:8px;}
+@media (max-width:640px){.cf-row{grid-template-columns:1fr;}}
+.news-note a{color:var(--gold);}
 .news-note{margin-top:18px;font-family:var(--font-m);font-size:11px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--cream-38);}
 
@@ -1040,6 +1052,21 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
+<!-- ================= CONTACT ================= -->
+<section class="section newsletter" id="contact">
+  <div class="overline center" data-reveal>Get in touch</div>
+  <h2 class="h-lg" data-reveal>Reach Francene <em>directly.</em></h2>
+  <form class="contact-form" data-reveal onsubmit="event.preventDefault();location.href='mailto:francene@impactearnings.com?subject='+encodeURIComponent('Website inquiry from '+this.cname.value)+'&amp;body='+encodeURIComponent(this.cmessage.value+'\n\n— '+this.cname.value+' ('+this.cemail.value+')');">
+    <div class="cf-row">
+      <input type="text" name="cname" placeholder="Your name" required aria-label="Your name">
+      <input type="email" name="cemail" placeholder="Your email" required aria-label="Your email">
+    </div>
+    <textarea name="cmessage" rows="5" placeholder="What would you like to explore?" required aria-label="Your message"></textarea>
+    <button type="submit" class="btn-book" data-hover data-magnetic>Send message <span class="arr">→</span></button>
+  </form>
+  <p class="news-note" data-reveal>Or write directly: <a href="mailto:francene@impactearnings.com" data-hover>francene@impactearnings.com</a></p>
+</section>
+
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-word" data-hover>Impact Earnings</div>
@@ -1063,6 +1090,7 @@ img{max-width:100%;display:block;}
       <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" data-hover>Book a call</a>
       <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" data-hover>Newsletter</a>
       <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" data-hover>Webinar</a>
+      <a href="#contact" data-hover>Contact</a>
       <a href="#" data-hover>LinkedIn</a>
     </div>
     <div class="col">

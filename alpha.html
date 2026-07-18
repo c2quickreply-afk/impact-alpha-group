@@ -484,6 +484,7 @@ img{max-width:100%;display:block;}
   font-family:var(--font-b);font-weight:500;font-size:12px;
   letter-spacing:.14em;color:var(--gold);
 }
+.portrait-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .portrait .portrait-ring{
   position:absolute;inset:18px;border:1px solid rgba(217,182,113,.2);border-radius:16px;pointer-events:none;
 }
@@ -543,6 +544,19 @@ img{max-width:100%;display:block;}
 }
 .news-form button:hover{background:var(--gold-hi);}
 .news-cta{margin:44px auto 0;}
+.indiv-copy{max-width:64ch;margin:22px auto 0;color:var(--cream-60);font-size:clamp(15px,1.3vw,17px);}
+.contact-form{max-width:640px;margin:44px auto 0;display:flex;flex-direction:column;gap:14px;text-align:left;}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.contact-form input,.contact-form textarea{
+  background:rgba(5,10,7,.6);border:1px solid var(--line);border-radius:18px;
+  padding:16px 22px;color:var(--cream);font-family:var(--font-b);font-size:15px;
+  font-weight:300;outline:none;transition:border-color .3s,box-shadow .3s;resize:vertical;
+}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold);box-shadow:0 0 34px rgba(217,182,113,.12);}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--cream-38);}
+.contact-form button{align-self:center;margin-top:8px;}
+@media (max-width:640px){.cf-row{grid-template-columns:1fr;}}
+.news-note a{color:var(--gold);}
 .news-note{margin-top:18px;font-family:var(--font-m);font-size:11px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--cream-38);}
 
@@ -735,8 +749,6 @@ img{max-width:100%;display:block;}
     <a href="#sectors" class="nav-link" data-hover>Sectors</a>
     <a href="#approach" class="nav-link" data-hover>Approach</a>
     <a href="#about" class="nav-link" data-hover>About</a>
-    <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="nav-link accent" data-hover>Newsletter</a>
-    <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" class="nav-link accent" data-hover>Webinar</a>
     <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Book a Call <span class="arr">→</span></a>
   </div>
 </nav>
@@ -748,9 +760,8 @@ img{max-width:100%;display:block;}
   <div class="hero-inner">
     <div class="hero-kicker"><span class="dot"></span> Institutional Advisory · Complex Capital Projects</div>
     <h1 class="hero-title" id="heroTitle">
-      <span class="line"><span>Where complex</span></span>
-      <span class="line"><span>capital meets</span></span>
-      <span class="line"><span><em>alignment.</em></span></span>
+      <span class="line"><span>Where capital</span></span>
+      <span class="line"><span>meets <em>alignment.</em></span></span>
     </h1>
     <p class="hero-sub">Impact Alpha Group is a strategic development and partnership firm for
       complex, mission-driven capital projects — aligning the relationships, capital pathways,
@@ -921,22 +932,22 @@ img{max-width:100%;display:block;}
   <div class="proof-grid" data-reveal-stagger>
     <div class="proof-card">
       <div class="proof-amount">$500K in 6 months</div>
-      <p>Raised for Ghana Green Guard — a regenerative environmental initiative, funded from a standing start.</p>
+      <p>Raised and secured from a standing start — advancing the early-stage development of a projected $25 billion carbon-finance initiative in Ghana.</p>
       <span class="proof-tag">Completed raise</span>
     </div>
     <div class="proof-card">
       <div class="proof-amount">$12M+ Colorado</div>
-      <p>Development deal currently in progress — capital coordination and stakeholder alignment underway.</p>
-      <span class="proof-tag">In progress</span>
+      <p>Financing partner introduced and lender pre-approval received for a Colorado housing development — final due diligence underway.</p>
+      <span class="proof-tag">Financing in progress</span>
     </div>
     <div class="proof-card">
-      <div class="proof-amount">$400M active</div>
-      <p>California / Mexico cross-border project — active strategic coordination across capital and partners.</p>
-      <span class="proof-tag">Active project</span>
+      <div class="proof-amount">$400M+ initiative</div>
+      <p>Introduced capital relationships for a large-scale U.S. / Mexico climate, water-restoration, infrastructure, and community-development initiative — multiple interested financing parties currently engaged.</p>
+      <span class="proof-tag">Active capital raise</span>
     </div>
     <div class="proof-card">
-      <div class="proof-amount">25+ years</div>
-      <p>Institutional equity trading and sales — a career built where sound judgment, disciplined execution, and trusted relationships were the entire job.</p>
+      <div class="proof-amount">Millions moved</div>
+      <p>In capital and client activity — more than twenty-five years spanning institutional client development, digital-asset communities, capital introductions, and mission-driven fundraising.</p>
       <span class="proof-tag">Career track record</span>
     </div>
   </div>
@@ -953,25 +964,7 @@ img{max-width:100%;display:block;}
   <div class="overline" data-reveal>The people</div>
   <div class="about-grid">
     <figure class="portrait" data-reveal data-tilt data-hover>
-      <div class="portrait-logo">
-        <svg viewBox="0 0 200 200" fill="none" stroke="#d9b671" stroke-width="2.6" stroke-linejoin="round">
-          <path d="M100 88 112 100 100 112 88 100Z"/>
-          <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z"/>
-          <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(90 100 100)"/>
-          <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(180 100 100)"/>
-          <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(270 100 100)"/>
-          <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z"/>
-          <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(90 100 100)"/>
-          <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(180 100 100)"/>
-          <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(270 100 100)"/>
-          <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z"/>
-          <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(90 100 100)"/>
-          <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(180 100 100)"/>
-          <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(270 100 100)"/>
-        </svg>
-        <div class="pl-word"><b>IMPACT</b><span>ALPHA</span></div>
-        <div class="pl-tag">Where Capital Meets Alignment</div>
-      </div>
+      <img class="portrait-photo" src="francene.jpg" alt="Francene Loomiller">
       <span class="portrait-ring"></span>
       <figcaption><small>Founder · Impact Alpha Group</small><b>Francene Loomiller</b></figcaption>
     </figure>
@@ -979,18 +972,22 @@ img{max-width:100%;display:block;}
       <h2 class="h-lg" data-reveal style="margin-bottom:30px">Trust, cultivated over <em>25 years.</em></h2>
       <div data-reveal-stagger>
         <p><b>Francene operates at the intersection of capital, relationships, and execution.</b>
-        She began her career in institutional equity trading and sales — more than twenty-five
-        years in financial markets where sound judgment, disciplined execution, and trusted
-        relationships were essential — before turning that rigor toward the advancement of
-        complex, mission-driven initiatives.</p>
-        <p>She went on to found Schoolyard Crop, a nonprofit that brought environmental education
-        into schools through edible gardens and systems thinking — work that joined fundraising,
-        community engagement, and partnership development around a shared purpose. That same
-        combination now lets her align capital partnerships behind regenerative development,
-        community resilience, and sustainable economic systems.</p>
-        <p>Her consistent strength: cultivating trust quickly and building durable relationships
-        across sectors. Many of the partnerships she coordinates begin with a single introduction —
-        and evolve into long-term strategic alignment.</p>
+        She began her career in institutional equity trading and sales, building more than
+        twenty-five years of experience across financial markets — where sound judgment,
+        disciplined execution, and trusted relationships were essential.</p>
+        <p>Her work later expanded into nonprofit leadership through Schoolyard Crop, an
+        environmental education initiative that brought edible gardens and systems thinking into
+        schools — strengthening her commitment to community engagement, partnership development,
+        and creating pathways for people to participate more meaningfully in the systems shaping
+        their lives.</p>
+        <p>She ultimately returned to the financial markets through digital assets, blockchain
+        ecosystems, and emerging financial technologies — rooted in a desire to help level the
+        playing field by expanding access to education, technology, and opportunities that have
+        historically been difficult for individuals and communities to reach.</p>
+        <p>Across traditional finance, private capital, digital assets, technology, and
+        mission-driven enterprise, her consistent strength is cultivating trust quickly and
+        building durable relationships. Many of the partnerships she coordinates begin with a
+        single introduction — and evolve into long-term strategic alignment.</p>
         <div class="pillars">
           <div class="pillar"><b>Trust</b><span>earned over time</span></div>
           <div class="pillar"><b>Alignment</b><span>shared purpose</span></div>
@@ -1017,15 +1014,6 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ================= BRIEFING ================= -->
-<section class="section newsletter" id="briefing">
-  <div class="overline center" data-reveal>The Alpha Briefing</div>
-  <h2 class="h-lg" data-reveal>Not ready to talk? <em>Watch the work unfold.</em></h2>
-  <div class="news-cta" data-reveal>
-    <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Join the newsletter <span class="arr">→</span></a>
-  </div>
-  <p class="news-note" data-reveal>Occasional field notes on capital, community & carbon · no noise · unsubscribe anytime</p>
-</section>
-
 <!-- ================= BOOK ================= -->
 <section class="section book" id="book">
   <div class="book-aurora"></div>
@@ -1061,6 +1049,40 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
+<!-- ================= INDIVIDUALS ================= -->
+<section class="section newsletter" id="individuals">
+  <div class="overline center" data-reveal>For individuals</div>
+  <h2 class="h-lg" data-reveal>A separate path for <em>individual exploration.</em></h2>
+  <p class="indiv-copy" data-reveal>Impact Alpha Group is focused on institutional initiatives,
+  complex projects, and strategic partnerships. Francene's work also includes a separate
+  educational platform for individuals, entrepreneurs, and professionals who want to better
+  understand digital assets, emerging financial technologies, and new models of participation
+  in the evolving financial economy.</p>
+  <p class="indiv-copy" data-reveal>Through Impact Earnings, she shares educational resources,
+  market perspectives, technology demonstrations, and selected opportunities she is personally
+  exploring with her community — distinct from Impact Alpha Group's institutional advisory
+  services, but informed by the same principles: relationships, education, thoughtful due
+  diligence, and responsible participation.</p>
+  <div class="news-cta" data-reveal>
+    <a href="https://impactearnings.com" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Explore Impact Earnings <span class="arr">→</span></a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section newsletter" id="contact">
+  <div class="overline center" data-reveal>Get in touch</div>
+  <h2 class="h-lg" data-reveal>Reach Francene <em>directly.</em></h2>
+  <form class="contact-form" data-reveal onsubmit="event.preventDefault();location.href='mailto:francene@impactearnings.com?subject='+encodeURIComponent('Website inquiry from '+this.cname.value)+'&amp;body='+encodeURIComponent(this.cmessage.value+'\n\n— '+this.cname.value+' ('+this.cemail.value+')');">
+    <div class="cf-row">
+      <input type="text" name="cname" placeholder="Your name" required aria-label="Your name">
+      <input type="email" name="cemail" placeholder="Your email" required aria-label="Your email">
+    </div>
+    <textarea name="cmessage" rows="5" placeholder="What would you like to explore?" required aria-label="Your message"></textarea>
+    <button type="submit" class="btn-book" data-hover data-magnetic>Send message <span class="arr">→</span></button>
+  </form>
+  <p class="news-note" data-reveal>Or write directly: <a href="mailto:francene@impactearnings.com" data-hover>francene@impactearnings.com</a></p>
+</section>
+
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-word" data-hover>Impact Alpha Group</div>
@@ -1082,8 +1104,8 @@ img{max-width:100%;display:block;}
     </div>
     <div class="col">
       <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" data-hover>Book a call</a>
-      <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" data-hover>Webinar</a>
-      <a href="#briefing" data-hover>The Briefing</a>
+      <a href="#contact" data-hover>Contact</a>
+      <a href="https://impactearnings.com" target="_blank" rel="noopener" data-hover>Impact Earnings</a>
       <a href="#" data-hover>LinkedIn</a>
     </div>
     <div class="col">
