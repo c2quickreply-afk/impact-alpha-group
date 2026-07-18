@@ -4,6 +4,10 @@
       "source": "/",
       "has": [{ "type": "host", "value": "(www\\.)?impactalphagroup\\.com" }],
       "destination": "/alpha.html"
+    },
+    {
+      "source": "/",
+      "destination": "/earnings.html"
     }
   ],
   "redirects": [
@@ -45,20 +49,17 @@
     },
     {
       "source": "/alpha.html",
-      "has": [{ "type": "host", "value": "(www\\.)?impactalphagroup\\.com" }],
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/earnings.html",
       "destination": "/",
       "permanent": false
     },
     {
       "source": "/index.html",
-      "has": [{ "type": "host", "value": "(www\\.)?impactalphagroup\\.com" }],
       "destination": "/",
-      "permanent": false
-    },
-    {
-      "source": "/alpha.html",
-      "has": [{ "type": "host", "value": "(www\\.)?impactearnings\\.com" }],
-      "destination": "https://impactalphagroup.com/",
       "permanent": false
     }
   ]
