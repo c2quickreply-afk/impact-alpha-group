@@ -1072,7 +1072,7 @@ img{max-width:100%;display:block;}
 <section class="section newsletter" id="contact">
   <div class="overline center" data-reveal>Get in touch</div>
   <h2 class="h-lg" data-reveal>Reach Francene <em>directly.</em></h2>
-  <form class="contact-form" data-reveal onsubmit="event.preventDefault();location.href='mailto:francene@impactearnings.com?subject='+encodeURIComponent('Website inquiry from '+this.cname.value)+'&amp;body='+encodeURIComponent(this.cmessage.value+'\n\n— '+this.cname.value+' ('+this.cemail.value+')');">
+  <form class="contact-form" data-reveal>
     <div class="cf-row">
       <input type="text" name="cname" placeholder="Your name" required aria-label="Your name">
       <input type="email" name="cemail" placeholder="Your email" required aria-label="Your email">
@@ -1433,6 +1433,36 @@ if (!isTouch && !prefersReduced) {
   requestAnimationFrame(frame);
 })();
 
+/* ---------- contact form: in-page submission, no mail client ---------- */
+document.querySelectorAll(".contact-form").forEach(f => {
+  f.addEventListener("submit", async e => {
+    e.preventDefault();
+    const btn = f.querySelector("button");
+    const orig = btn.innerHTML;
+    btn.disabled = true; btn.textContent = "Sending…";
+    try {
+      const r = await fetch("https://formsubmit.co/ajax/francene@impactearnings.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          name: f.cname.value,
+          email: f.cemail.value,
+          message: f.cmessage.value,
+          _subject: "Website inquiry from " + f.cname.value,
+          _replyto: f.cemail.value,
+          _template: "table",
+          _captcha: "false"
+        })
+      });
+      if (!r.ok) throw new Error("send failed");
+      btn.textContent = "Message sent ✓";
+      f.reset();
+    } catch (err) {
+      btn.disabled = false; btn.innerHTML = orig;
+      alert("Something went wrong sending your message — please email francene@impactearnings.com directly.");
+    }
+  });
+});
 </script>
 </body>
 </html>
