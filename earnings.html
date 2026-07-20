@@ -189,8 +189,8 @@ img{max-width:100%;display:block;}
    HERO
    ============================================================ */
 .hero{
-  position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:calc(var(--nav-h) + 40px) clamp(20px,6vw,96px) clamp(40px,6vh,72px);
+  position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  padding:calc(var(--nav-h) + 20px) clamp(20px,6vw,96px) clamp(60px,9vh,110px);
   overflow:hidden;
 }
 .hero-aurora{position:absolute;inset:0;z-index:0;overflow:hidden;}
@@ -349,7 +349,6 @@ img{max-width:100%;display:block;}
 
 /* feature cards w/ 3D tilt */
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;perspective:1200px;}
-.feat-grid.five{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
 .feat{
   position:relative;padding:34px 30px 38px;border-radius:20px;min-height:300px;
   border:1px solid var(--line-soft);
@@ -541,8 +540,28 @@ img{max-width:100%;display:block;}
 }
 .news-form button:hover{background:var(--gold-hi);}
 .news-cta{margin:44px auto 0;}
-.thesis-body{margin-top:30px;}
-.thesis-body p{color:var(--cream-60);font-size:clamp(15px,1.35vw,17.5px);font-weight:300;max-width:62ch;margin-bottom:16px;}
+.section.tight-top{padding-top:clamp(48px,6vw,84px);}
+/* full-width topic rows — same system as the alpha site's capability list */
+.cap-list{border-top:1px solid var(--line-soft);}
+.cap-row{
+  position:relative;display:grid;grid-template-columns:70px 1fr auto;gap:24px;align-items:center;
+  padding:30px 8px;border-bottom:1px solid var(--line-soft);cursor:pointer;overflow:hidden;
+}
+.cap-row .cap-fill{
+  position:absolute;inset:0;background:linear-gradient(90deg,rgba(217,182,113,.07),rgba(109,81,179,.05));
+  transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease-out);
+}
+.cap-row:hover .cap-fill{transform:scaleY(1);}
+.cap-row .cap-i{font-family:var(--font-m);font-size:11px;letter-spacing:.2em;color:var(--gold);position:relative;}
+.cap-row h4{
+  position:relative;font-family:var(--font-d);font-weight:400;font-size:clamp(20px,2.4vw,32px);
+  transition:transform .5s var(--ease-out);
+}
+.cap-row:hover h4{transform:translateX(14px);}
+.cap-row .cap-desc{
+  position:relative;max-width:36ch;font-size:13.5px;color:var(--cream-60);text-align:right;
+}
+@media (max-width:760px){.cap-row{grid-template-columns:48px 1fr;}.cap-row .cap-desc{display:none;}}
 .indiv-copy{max-width:64ch;margin:22px auto 0;color:var(--cream-60);font-size:clamp(15px,1.3vw,17px);}
 .contact-form{max-width:640px;margin:44px auto 0;display:flex;flex-direction:column;gap:14px;text-align:left;}
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
@@ -796,21 +815,18 @@ img{max-width:100%;display:block;}
 <section class="section philosophy" id="philosophy">
   <div class="overline" data-reveal>Our thesis</div>
   <p class="statement" id="statement">
-    Opportunity is evolving. Understanding must come first.
+    Opportunity is evolving. Understanding must come first. The financial landscape is changing
+    quickly. Digital assets, artificial intelligence, automation and new models of ownership are
+    creating opportunities that were once available primarily to institutions. They are also
+    creating more noise, confusion and risk. Impact Earnings exists to help individuals better
+    understand these changes, explore emerging opportunities and make more informed decisions —
+    without hype, pressure or unnecessary complexity.
   </p>
-  <div class="thesis-body" data-reveal>
-    <p>The financial landscape is changing quickly. Digital assets, artificial intelligence,
-    automation and new models of ownership are creating opportunities that were once available
-    primarily to institutions.</p>
-    <p>They are also creating more noise, confusion and risk.</p>
-    <p>Impact Earnings exists to help individuals better understand these changes, explore
-    emerging opportunities and make more informed decisions — without hype, pressure or
-    unnecessary complexity.</p>
-  </div>
+  <div class="philosophy-tail" data-reveal>Education first · No hype · No guarantees</div>
 </section>
 
 <!-- ================= TRACK 1 : IMPACT EARNINGS ================= -->
-<section class="section track-section" id="earnings">
+<section class="section track-section tight-top" id="earnings">
   <div class="track-head">
     <div data-reveal>
       <div class="overline">The Impact Earnings mission</div>
@@ -860,33 +876,33 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ================= WHAT WE COVER ================= -->
-<section class="section" id="topics">
-  <div class="overline center" data-reveal>What we cover</div>
-  <div class="feat-grid five" data-reveal-stagger style="margin-top:clamp(32px,4vw,52px)">
-    <div class="feat" data-tilt data-hover>
-      <span class="feat-num">01</span>
+<section class="section tight-top" id="topics">
+  <div class="overline" data-reveal>What we cover</div>
+  <div class="cap-list" data-reveal-stagger style="margin-top:clamp(28px,3.5vw,48px)">
+    <div class="cap-row" data-hover>
+      <span class="cap-fill"></span><span class="cap-i">01</span>
       <h4>Digital Assets & Market Trends</h4>
-      <p>Understand cryptocurrencies, blockchain networks and the forces shaping adoption.</p>
+      <p class="cap-desc">Understand cryptocurrencies, blockchain networks and the forces shaping adoption.</p>
     </div>
-    <div class="feat" data-tilt data-hover>
-      <span class="feat-num">02</span>
+    <div class="cap-row" data-hover>
+      <span class="cap-fill"></span><span class="cap-i">02</span>
       <h4>Automation & Emerging Technology</h4>
-      <p>Explore how AI, automated systems and new financial tools are changing participation in markets.</p>
+      <p class="cap-desc">Explore how AI, automated systems and new financial tools are changing participation in markets.</p>
     </div>
-    <div class="feat" data-tilt data-hover>
-      <span class="feat-num">03</span>
+    <div class="cap-row" data-hover>
+      <span class="cap-fill"></span><span class="cap-i">03</span>
       <h4>Security & Self-Custody</h4>
-      <p>Learn practical habits for protecting wallets, accounts, devices and digital assets.</p>
+      <p class="cap-desc">Learn practical habits for protecting wallets, accounts, devices and digital assets.</p>
     </div>
-    <div class="feat" data-tilt data-hover>
-      <span class="feat-num">04</span>
+    <div class="cap-row" data-hover>
+      <span class="cap-fill"></span><span class="cap-i">04</span>
       <h4>Opportunities — with Discernment</h4>
-      <p>Examine emerging platforms, strategies and projects through an experienced, risk-aware lens.</p>
+      <p class="cap-desc">Examine emerging platforms, strategies and projects through an experienced, risk-aware lens.</p>
     </div>
-    <div class="feat" data-tilt data-hover>
-      <span class="feat-num">05</span>
+    <div class="cap-row" data-hover>
+      <span class="cap-fill"></span><span class="cap-i">05</span>
       <h4>Capital With Purpose</h4>
-      <p>Discover how technology and investment can support meaningful real-world outcomes.</p>
+      <p class="cap-desc">Discover how technology and investment can support meaningful real-world outcomes.</p>
     </div>
   </div>
 </section>
@@ -1173,7 +1189,7 @@ document.querySelectorAll(".marquee").forEach(mq => {
 (function(){
   const st = document.getElementById("statement");
   const words = st.textContent.trim().split(/\s+/);
-  const goldWords = new Set(["Alignment","alignment","sync,","momentum"]);
+  const goldWords = new Set(["Opportunity","Understanding","opportunities","hype,"]);
   st.innerHTML = words.map(w =>
     `<span class="w${goldWords.has(w) ? " gold" : ""}">${w}</span>`).join(" ");
   const spans = st.querySelectorAll(".w");
