@@ -241,12 +241,12 @@ img{max-width:100%;display:block;}
   opacity:0;transform:translateY(20px);transition:opacity 1s var(--ease-out) .7s,transform 1s var(--ease-out) .7s;
 }
 .hero.play .hero-sub{opacity:1;transform:none;}
-/* self-sort track cards */
-.hero-tracks{
-  margin-top:clamp(40px,5vh,64px);display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:960px;
+/* hero CTA pair */
+.hero-ctas{
+  margin-top:clamp(36px,4.5vh,56px);display:flex;gap:16px;flex-wrap:wrap;align-items:center;
   opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease-out) 1s,transform 1s var(--ease-out) 1s;
 }
-.hero.play .hero-tracks{opacity:1;transform:none;}
+.hero.play .hero-ctas{opacity:1;transform:none;}
 .track-card{
   position:relative;display:block;padding:28px 30px 26px;border-radius:18px;
   border:1px solid var(--line);
@@ -349,6 +349,7 @@ img{max-width:100%;display:block;}
 
 /* feature cards w/ 3D tilt */
 .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;perspective:1200px;}
+.feat-grid.five{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
 .feat{
   position:relative;padding:34px 30px 38px;border-radius:20px;min-height:300px;
   border:1px solid var(--line-soft);
@@ -540,6 +541,9 @@ img{max-width:100%;display:block;}
 }
 .news-form button:hover{background:var(--gold-hi);}
 .news-cta{margin:44px auto 0;}
+.thesis-body{margin-top:30px;}
+.thesis-body p{color:var(--cream-60);font-size:clamp(15px,1.35vw,17.5px);font-weight:300;max-width:62ch;margin-bottom:16px;}
+.indiv-copy{max-width:64ch;margin:22px auto 0;color:var(--cream-60);font-size:clamp(15px,1.3vw,17px);}
 .contact-form{max-width:640px;margin:44px auto 0;display:flex;flex-direction:column;gap:14px;text-align:left;}
 .cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .contact-form input,.contact-form textarea{
@@ -669,7 +673,7 @@ img{max-width:100%;display:block;}
 @media (max-width:760px){
   .nav-link{display:none;}           /* text links collapse… */
   .btn-book{padding:12px 20px;}      /* …but Book a Call never leaves the nav */
-  .hero-tracks{grid-template-columns:1fr;}
+  .hero-ctas{flex-direction:column;align-items:flex-start;}
   .hero-scrollcue{display:none;}
   .pillars{grid-template-columns:1fr;}
 }
@@ -680,7 +684,7 @@ img{max-width:100%;display:block;}
   .hero-kicker{margin-bottom:18px;}
   .hero-title{font-size:clamp(40px,6.4vw,84px);}
   .hero-sub{margin-top:20px;font-size:15px;}
-  .hero-tracks{margin-top:28px;}
+  .hero-ctas{margin-top:28px;}
   .track-card{padding:20px 24px 18px;}
   .track-card .tc-num{margin-bottom:14px;}
 }
@@ -740,7 +744,6 @@ img{max-width:100%;display:block;}
   </a>
   <div class="nav-links">
     <a href="#earnings" class="nav-link" data-hover>Impact Earnings</a>
-    <a href="#alpha" class="nav-link" data-hover>Impact Alpha Group</a>
     <a href="#about" class="nav-link" data-hover>About</a>
     <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="nav-link accent" data-hover>Newsletter</a>
     <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" class="nav-link accent" data-hover>Webinar</a>
@@ -755,30 +758,15 @@ img{max-width:100%;display:block;}
   <div class="hero-inner">
     <div class="hero-kicker"><span class="dot"></span> Trust · Alignment · Execution</div>
     <h1 class="hero-title" id="heroTitle">
-      <span class="line"><span>Money grows</span></span>
-      <span class="line"><span>where capital</span></span>
-      <span class="line"><span>meets <em>alignment.</em></span></span>
+      <span class="line"><span>Make sense</span></span>
+      <span class="line"><span>of the new</span></span>
+      <span class="line"><span><em>financial era.</em></span></span>
     </h1>
-    <p class="hero-sub">Impact Earnings is a capital-strategy practice led by Francene Loomiller —
-      guiding everyday people into the digital-asset era through education, and coordinating
-      institutional capital behind regenerative, mission-aligned initiatives.</p>
-    <div class="hero-tracks">
-      <a class="track-card" href="#earnings" data-hover data-tilt>
-        <div class="tc-num">TRACK 01 · IMPACT EARNINGS
-          <span class="tc-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#d9b671" stroke-width="1.4"/></svg></span>
-        </div>
-        <h3>Impact Earnings</h3>
-        <p>I'm new to digital assets and want to learn safely — plain-language education, no jargon, no gatekeeping.</p>
-        <span class="tc-tag">Education & Community · For Individuals</span>
-      </a>
-      <a class="track-card alt" href="#alpha" data-hover data-tilt>
-        <div class="tc-num">TRACK 02 · IMPACT ALPHA GROUP
-          <span class="tc-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#a78bfa" stroke-width="1.4"/></svg></span>
-        </div>
-        <h3>Impact Alpha Group</h3>
-        <p>I'm building something bigger — capital coordination, strategic partnerships, and stakeholder alignment.</p>
-        <span class="tc-tag">Advisory & Partnerships · For Builders</span>
-      </a>
+    <p class="hero-sub">Clear, experience-led education on digital assets, markets, automation,
+      security and emerging opportunities.</p>
+    <div class="hero-ctas">
+      <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Explore the Latest Insights <span class="arr">→</span></a>
+      <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" class="btn-ghost" data-hover>Join the Community</a>
     </div>
   </div>
   <div class="hero-scrollcue">Scroll <i></i></div>
@@ -787,49 +775,58 @@ img{max-width:100%;display:block;}
 <!-- ================= STATS ================= -->
 <section class="stats" data-reveal-stagger id="stats">
   <div class="stat">
-    <div class="stat-num"><span data-count="100">0</span><span class="suffix">+</span></div>
-    <div class="stat-label">People guided into digital assets</div>
+    <div class="stat-num"><span data-count="25">0</span><span class="suffix">+</span></div>
+    <div class="stat-label">Years in financial markets</div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span class="suffix" style="margin:0 2px 0 0">$</span><span data-count="500">0</span><span class="suffix">K</span></div>
-    <div class="stat-label">Raised in 6 months · Ghana Green Guard</div>
+    <div class="stat-num"><span data-count="100">0</span><span class="suffix">s</span></div>
+    <div class="stat-label">Educational sessions hosted</div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span class="suffix" style="margin:0 2px 0 0">$</span><span data-count="12">0</span><span class="suffix">M+</span></div>
-    <div class="stat-label">Colorado development · in progress</div>
+    <div class="stat-num">Both worlds</div>
+    <div class="stat-label">Institutional finance, digital assets & emerging opportunities</div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span class="suffix" style="margin:0 2px 0 0">$</span><span data-count="400">0</span><span class="suffix">M</span></div>
-    <div class="stat-label">California / Mexico project · active</div>
+    <div class="stat-num">No hype</div>
+    <div class="stat-label">A community-first, education-led approach</div>
   </div>
 </section>
 
 <!-- ================= PHILOSOPHY ================= -->
 <section class="section philosophy" id="philosophy">
-  <div class="overline" data-reveal>The thesis</div>
+  <div class="overline" data-reveal>Our thesis</div>
   <p class="statement" id="statement">
-    Capital is powerful. Alignment is everything. The greatest constraint in complex initiatives
-    is rarely money — it is the alignment between leadership, capital sources, strategic partners,
-    and the many stakeholders required to move an initiative forward. When those elements fall
-    into sync, momentum compounds. That is where we come in.
+    Opportunity is evolving. Understanding must come first.
   </p>
-  <div class="philosophy-tail" data-reveal>Est. on 25+ years of institutional finance</div>
+  <div class="thesis-body" data-reveal>
+    <p>The financial landscape is changing quickly. Digital assets, artificial intelligence,
+    automation and new models of ownership are creating opportunities that were once available
+    primarily to institutions.</p>
+    <p>They are also creating more noise, confusion and risk.</p>
+    <p>Impact Earnings exists to help individuals better understand these changes, explore
+    emerging opportunities and make more informed decisions — without hype, pressure or
+    unnecessary complexity.</p>
+  </div>
 </section>
 
 <!-- ================= TRACK 1 : IMPACT EARNINGS ================= -->
 <section class="section track-section" id="earnings">
   <div class="track-head">
     <div data-reveal>
-      <div class="overline">Track 01 — Impact Earnings</div>
+      <div class="overline">The Impact Earnings mission</div>
       <h2 class="h-lg">Leveling the playing field, <em>one person at a time.</em></h2>
     </div>
     <div data-reveal>
-      <p class="lede">Digital assets, DeFi yield, and crypto safety — explained in plain language,
-      by someone who spent 25 years inside institutional finance. The tools once reserved for
-      institutions are now open to everyone. We make sure you enter with clarity, not hype.</p>
+      <p class="lede">Digital assets, automated trading, market trends, emerging technologies and
+      crypto security, explained in plain language by someone with more than 25 years of
+      experience in financial markets.</p>
+      <p class="lede" style="margin-top:14px">Tools and opportunities once reserved for
+      institutions are becoming available to everyone. Impact Earnings helps people understand
+      what is changing, evaluate opportunities more carefully and participate with greater
+      clarity and confidence, not hype.</p>
       <div class="chip-row">
-        <span class="chip">Digital assets 101</span><span class="chip">DeFi yield</span>
-        <span class="chip">Crypto safety</span><span class="chip">Weekly education</span>
+        <span class="chip">Digital Assets</span><span class="chip">Automated Trading</span>
+        <span class="chip">Crypto Security</span><span class="chip">Emerging Opportunities</span>
       </div>
     </div>
   </div>
@@ -837,150 +834,99 @@ img{max-width:100%;display:block;}
     <div class="feat" data-tilt data-hover>
       <span class="feat-num">01</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M12 21 V9 M12 13 C8 11.5 5 8.5 5 4 C9.5 5 12 8 12 12 M12 12 C12 8 14.5 5 19 4 C19 8.5 16 11.5 12 13"/></svg></div>
-      <h4>Start with education</h4>
-      <p>Hundreds of live educational sessions hosted. Learn how digital assets actually work — custody, wallets, risk — before a single dollar moves.</p>
+      <h4>Start with understanding</h4>
+      <p>Learn how digital assets, wallets, exchanges, custody and market cycles actually work before putting money at risk.</p>
+      <p style="margin-top:10px">Impact Earnings breaks down complex ideas into practical, understandable education so you can make more informed decisions.</p>
     </div>
     <div class="feat" data-tilt data-hover>
       <span class="feat-num">02</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M3 17 L9 11 L13 15 L21 7 M15 7 h6 v6"/></svg></div>
-      <h4>Understand on-chain yield</h4>
-      <p>How DeFi yield actually works — where returns come from and what the risks are. Explained for understanding; education, never financial advice.</p>
+      <h4>Explore emerging opportunities</h4>
+      <p>Understand automated trading, decentralized finance, AI-driven tools and new financial technologies — including how they work, where potential value may come from and what risks deserve attention.</p>
+      <p style="margin-top:10px">Education first. No hype. No guarantees.</p>
     </div>
     <div class="feat" data-tilt data-hover>
       <span class="feat-num">03</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M12 3 L20 7 V12 C20 17 16.5 20 12 21 C7.5 20 4 17 4 12 V7 Z M8.5 12 L11 14.5 L15.5 9.5"/></svg></div>
-      <h4>Stay protected</h4>
-      <p>Scam-avoidance, self-custody hygiene, and the discipline of an institutional risk lens — applied to your personal portfolio.</p>
+      <h4>Protect what you build</h4>
+      <p>Develop stronger habits around wallets, passwords, devices, self-custody, platform security and scam avoidance.</p>
+      <p style="margin-top:10px">Apply an institutional risk mindset to your personal digital-asset activity.</p>
     </div>
   </div>
   <div class="cta-row" data-reveal>
     <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Join Impact Earnings — book a free consultation <span class="arr">→</span></a>
-    <span class="cta-note">100+ people already guided · education only, never financial advice</span>
+    <span class="cta-note">Education only, never financial advice</span>
   </div>
 </section>
 
-<!-- ================= MARQUEE ================= -->
-<div class="marquee-wrap" aria-hidden="true">
-  <div class="marquee" data-speed="0.6">
-    <span>Regenerative development</span><span>Carbon finance</span><span>Digital infrastructure</span>
-    <span>Advanced manufacturing</span><span>Microgrid energy</span><span>Blockchain & fintech</span>
-    <span>Environmental restoration</span><span>Mixed-use development</span>
-  </div>
-  <div class="marquee" data-speed="-0.5">
-    <span>Capital stacks</span><span>Strategic partnerships</span><span>Stakeholder alignment</span>
-    <span>Public-private incentives</span><span>Community development</span><span>Mission-aligned capital</span>
-  </div>
-</div>
-
-<!-- ================= TRACK 2 : IMPACT ALPHA GROUP ================= -->
-<section class="section track-section" id="alpha">
-  <div class="track-head">
-    <div data-reveal>
-      <div class="overline" style="color:var(--violet)">Track 02 — For builders & institutions</div>
-      <h2 class="h-lg">Where builders and aligned capital <em>converge.</em></h2>
+<!-- ================= WHAT WE COVER ================= -->
+<section class="section" id="topics">
+  <div class="overline center" data-reveal>What we cover</div>
+  <div class="feat-grid five" data-reveal-stagger style="margin-top:clamp(32px,4vw,52px)">
+    <div class="feat" data-tilt data-hover>
+      <span class="feat-num">01</span>
+      <h4>Digital Assets & Market Trends</h4>
+      <p>Understand cryptocurrencies, blockchain networks and the forces shaping adoption.</p>
     </div>
-    <div data-reveal>
-      <p class="lede">Impact Alpha Group is the advisory and strategic-partnership practice working
-      alongside Impact Earnings. We coordinate capital sources, partners, incentives, infrastructure
-      decisions, and leadership priorities — so complex initiatives move from vision to execution
-      with clarity instead of friction.</p>
+    <div class="feat" data-tilt data-hover>
+      <span class="feat-num">02</span>
+      <h4>Automation & Emerging Technology</h4>
+      <p>Explore how AI, automated systems and new financial tools are changing participation in markets.</p>
     </div>
-  </div>
-
-  <div class="cap-list" data-reveal-stagger>
-    <div class="cap-row" data-hover>
-      <span class="cap-fill"></span><span class="cap-i">01</span>
-      <h4>Capital positioning & funding coordination</h4>
-      <p class="cap-desc">Structuring durable capital frameworks across private, public, and blended sources.</p>
+    <div class="feat" data-tilt data-hover>
+      <span class="feat-num">03</span>
+      <h4>Security & Self-Custody</h4>
+      <p>Learn practical habits for protecting wallets, accounts, devices and digital assets.</p>
     </div>
-    <div class="cap-row" data-hover>
-      <span class="cap-fill"></span><span class="cap-i">02</span>
-      <h4>Strategic partnership cultivation</h4>
-      <p class="cap-desc">Relationships that begin with a single introduction and evolve into long-term alignment.</p>
+    <div class="feat" data-tilt data-hover>
+      <span class="feat-num">04</span>
+      <h4>Opportunities — with Discernment</h4>
+      <p>Examine emerging platforms, strategies and projects through an experienced, risk-aware lens.</p>
     </div>
-    <div class="cap-row" data-hover>
-      <span class="cap-fill"></span><span class="cap-i">03</span>
-      <h4>Partner & stakeholder communication</h4>
-      <p class="cap-desc">Keeping every party moving in the same direction as complexity compounds.</p>
+    <div class="feat" data-tilt data-hover>
+      <span class="feat-num">05</span>
+      <h4>Capital With Purpose</h4>
+      <p>Discover how technology and investment can support meaningful real-world outcomes.</p>
     </div>
-    <div class="cap-row" data-hover>
-      <span class="cap-fill"></span><span class="cap-i">04</span>
-      <h4>Public-private alignment & incentive readiness</h4>
-      <p class="cap-desc">Navigating regulatory frameworks, incentives, and public funding pathways.</p>
-    </div>
-    <div class="cap-row" data-hover>
-      <span class="cap-fill"></span><span class="cap-i">05</span>
-      <h4>Execution oversight & disciplined follow-through</h4>
-      <p class="cap-desc">Momentum built on trust, clarity, and coordination — from vision to completion.</p>
-    </div>
-  </div>
-
-  <div class="proof-grid" data-reveal-stagger>
-    <div class="proof-card">
-      <div class="proof-amount">$500K in 6 months</div>
-      <p>Raised for Ghana Green Guard — a regenerative environmental initiative, funded from a standing start.</p>
-      <span class="proof-tag">Completed raise</span>
-    </div>
-    <div class="proof-card">
-      <div class="proof-amount">$12M+ Colorado</div>
-      <p>Development deal currently in progress — capital coordination and stakeholder alignment underway.</p>
-      <span class="proof-tag">In progress</span>
-    </div>
-    <div class="proof-card">
-      <div class="proof-amount">$400M active</div>
-      <p>California / Mexico cross-border project — active strategic coordination across capital and partners.</p>
-      <span class="proof-tag">Active project</span>
-    </div>
-    <div class="proof-card">
-      <div class="proof-amount">Millions raised</div>
-      <p>Across platforms and institutions over a 25+ year career spanning institutional finance, digital assets, and carbon markets.</p>
-      <span class="proof-tag">Career track record</span>
-    </div>
-  </div>
-
-  <div class="cta-row" data-reveal>
-    <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Join Impact Alpha Group — book a call <span class="arr">→</span></a>
-    <a href="https://impactalphagroup.com" target="_blank" rel="noopener" class="btn-ghost" data-hover>Learn more at impactalphagroup.com <span class="arr">→</span></a>
-    <span class="cta-note">Selective engagement · alignment-first</span>
   </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
 <section class="section about" id="about">
-  <div class="overline" data-reveal>The people</div>
+  <div class="overline" data-reveal>The founder</div>
   <div class="about-grid">
     <figure class="portrait" data-reveal data-tilt data-hover>
       <img class="portrait-photo" src="francene.jpg" alt="Francene Loomiller">
       <span class="portrait-ring"></span>
-      <figcaption><small>Founder · Capital Strategy</small><b>Francene Loomiller</b></figcaption>
+      <figcaption><small>Founder · Financial Markets & Digital Assets</small><b>Francene Loomiller</b></figcaption>
     </figure>
     <div class="about-body">
       <h2 class="h-lg" data-reveal style="margin-bottom:30px">Trust, cultivated over <em>25 years.</em></h2>
       <div data-reveal-stagger>
-        <p><b>Francene operates at the intersection of capital, relationships, and execution.</b>
-        Her work spans institutional finance, digital assets, carbon markets, and regenerative
-        infrastructure — helping leadership teams coordinate capital, partnerships, and strategic
-        execution across complex initiatives.</p>
-        <p>Beyond finance, she has spent years supporting regenerative development, environmental
-        restoration, community resilience, and sustainable economic systems. That combination lets
-        her align capital partnerships around initiatives designed to create both economic value
-        and long-term community benefit.</p>
-        <p>Her consistent strength: cultivating trust quickly and building durable relationships
-        across sectors. Many of the partnerships she coordinates begin with a single introduction —
-        and evolve into long-term strategic alignment.</p>
+        <p><b>Francene Loomiller has spent more than 25 years working across financial markets,
+        institutional finance, digital assets, education, and emerging opportunities.</b></p>
+        <p>She began her career in institutional equity trading and research sales, working
+        directly with professional market participants and gaining an inside perspective on how
+        capital, information, risk, and opportunity move through financial systems.</p>
+        <p>As financial technology evolved, Francene expanded her work into digital assets,
+        blockchain, decentralized finance, automated trading, and investor education. Through
+        Impact Earnings, she helps individuals understand complex ideas in plain language,
+        strengthen their security practices, evaluate new opportunities more carefully, and
+        participate with greater confidence and discernment.</p>
+        <p>Her approach is grounded in a simple belief: access alone is not enough. People also
+        need education, context, practical tools, and someone they can trust to ask the questions
+        others may overlook.</p>
+        <p>Francene is also the founder of Impact Alpha Group, where she works with leadership
+        teams and strategic partners to advance mission-aligned initiatives in regenerative
+        development, infrastructure, community resilience, environmental innovation, and emerging
+        financial technologies.</p>
+        <p>Across both platforms, her consistent strength is cultivating trust, connecting people
+        and ideas, and helping promising opportunities move from conversation toward meaningful
+        action.</p>
         <div class="pillars">
-          <div class="pillar"><b>People</b><span>before projections</span></div>
-          <div class="pillar"><b>Alignment</b><span>before capital</span></div>
-          <div class="pillar"><b>Conviction</b><span>before consensus</span></div>
-        </div>
-        <div class="partner-strip" data-hover>
-          <span class="avatar">H</span>
-          <div>
-            <b>Helen — Co-Partner, Impact Alpha Group</b>
-            <p>Francene collaborates with co-partner Helen and a vetted network of private capital
-            partners, grant strategists, technical advisors, and infrastructure specialists —
-            an ecosystem engaged as needed to support structured execution.</p>
-          </div>
+          <div class="pillar"><b>Education</b><span>before opportunity</span></div>
+          <div class="pillar"><b>Understanding</b><span>before action</span></div>
+          <div class="pillar"><b>Discernment</b><span>before hype</span></div>
         </div>
       </div>
       <div class="cta-row" data-reveal>
@@ -1015,23 +961,36 @@ img{max-width:100%;display:block;}
     </div>
     <div class="cal-stack" data-reveal-stagger>
       <a class="cal-card" href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" data-hover data-tilt>
-        <div class="cc-top">Impact Earnings
+        <div class="cc-top">Book a call
           <span class="tc-arrow"><svg width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#d9b671" stroke-width="1.4"/></svg></span>
         </div>
-        <h3>Join <em>Impact Earnings</em></h3>
-        <p>Book a free consultation — digital assets and on-chain yield explained in plain language, for education only.</p>
+        <h3>Chat with <em>Francene</em></h3>
+        <p>Book a free consultation — digital assets, security and emerging opportunities explained in plain language, for education only.</p>
         <span class="cc-foot">Opens Francene's calendar</span>
       </a>
-      <a class="cal-card alt" href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" data-hover data-tilt>
-        <div class="cc-top">Impact Alpha Group
+      <a class="cal-card alt" href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" data-hover data-tilt>
+        <div class="cc-top">Live session
           <span class="tc-arrow"><svg width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#a78bfa" stroke-width="1.4"/></svg></span>
         </div>
-        <h3>Join <em>Impact Alpha Group</em></h3>
-        <p>I'm building something bigger — book a strategy call on capital coordination, partnerships, and complex initiatives.</p>
-        <span class="cc-foot">Opens Francene's calendar</span>
+        <h3>Join the <em>community webinar</em></h3>
+        <p>Prefer to learn in a group? Register for a live educational session on digital assets, automation and market trends.</p>
+        <span class="cc-foot">Opens webinar registration</span>
       </a>
       <p class="book-foot">Prefer LinkedIn? <a href="#" data-hover>Connect with Francene →</a></p>
     </div>
+  </div>
+</section>
+
+<!-- ================= IMPACT ALPHA GROUP ================= -->
+<section class="section newsletter" id="alpha-group">
+  <div class="overline center" data-reveal>Beyond Impact Earnings</div>
+  <h2 class="h-lg" data-reveal>From financial innovation to <em>real-world impact.</em></h2>
+  <p class="indiv-copy" data-reveal>Francene also leads Impact Alpha Group, a strategic development
+  and partnership platform supporting complex, mission-aligned initiatives across regenerative
+  development, infrastructure, environmental innovation, community resilience and emerging
+  financial technologies.</p>
+  <div class="news-cta" data-reveal>
+    <a href="https://impactalphagroup.com" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Explore Impact Alpha Group <span class="arr">→</span></a>
   </div>
 </section>
 
@@ -1065,9 +1024,8 @@ img{max-width:100%;display:block;}
     </div>
     <div class="col">
       <a href="#earnings" data-hover>Impact Earnings</a>
-      <a href="#alpha" data-hover>Impact Alpha Group</a>
-      <a href="https://impactalphagroup.com" target="_blank" rel="noopener" data-hover>impactalphagroup.com</a>
       <a href="#about" data-hover>About</a>
+      <a href="https://impactalphagroup.com" target="_blank" rel="noopener" data-hover>Impact Alpha Group</a>
     </div>
     <div class="col">
       <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" data-hover>Book a call</a>
