@@ -339,6 +339,7 @@ img{max-width:100%;display:block;}
 .philosophy .statement .w{color:var(--cream-18);transition:color .35s linear;}
 .philosophy .statement .w.lit{color:var(--cream);}
 .philosophy .statement .w.gold.lit{color:var(--gold);font-style:italic;}
+.philosophy .statement .w.violet.lit{color:var(--violet);font-style:italic;}
 .philosophy-tail{
   margin-top:52px;display:flex;gap:20px;align-items:center;
   font-family:var(--font-m);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-38);
@@ -554,6 +555,17 @@ img{max-width:100%;display:block;}
 .news-cta{margin:44px auto 0;}
 .section.tight-top{padding-top:clamp(48px,6vw,84px);}
 .section.tight-bottom{padding-bottom:clamp(48px,6vw,84px);}
+/* violet accent rhythm — every other element leans violet, like the alpha site */
+.stat:nth-child(even) .stat-num{color:var(--violet);}
+.chip:nth-child(even):hover{border-color:var(--violet);color:var(--violet);background:rgba(167,139,250,.07);}
+.cap-row:nth-child(even) .cap-i{color:var(--violet);}
+.cap-row:nth-child(even) .cap-fill{background:linear-gradient(90deg,rgba(167,139,250,.09),rgba(217,182,113,.04));}
+.pillar:nth-child(2) b{color:var(--violet);}
+.feat.alt{border-color:rgba(167,139,250,.22);}
+.feat.alt:hover{border-color:rgba(167,139,250,.5);}
+.feat.alt .feat-num{color:var(--violet);}
+.overline.violet{color:var(--violet);}
+.overline.violet::before{background:var(--violet);}
 .lede-xl{font-size:clamp(18px,1.85vw,24px);line-height:1.55;max-width:46ch;color:var(--cream);font-weight:300;}
 /* full-width topic rows — same system as the alpha site's capability list */
 .cap-list{border-top:1px solid var(--line-soft);}
@@ -875,9 +887,9 @@ img{max-width:100%;display:block;}
       <p>Learn how digital assets, wallets, exchanges, custody and market cycles actually work before putting money at risk.</p>
       <p style="margin-top:10px">Impact Earnings breaks down complex ideas into practical, understandable education so you can make more informed decisions.</p>
     </div>
-    <div class="feat" data-tilt data-hover>
+    <div class="feat alt" data-tilt data-hover>
       <span class="feat-num">02</span>
-      <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M3 17 L9 11 L13 15 L21 7 M15 7 h6 v6"/></svg></div>
+      <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.4"><path d="M3 17 L9 11 L13 15 L21 7 M15 7 h6 v6"/></svg></div>
       <h4>Explore emerging opportunities</h4>
       <p>Understand automated trading, decentralized finance, AI-driven tools and new financial technologies — including how they work, where potential value may come from and what risks deserve attention.</p>
       <p style="margin-top:10px">Education first. No hype. No guarantees.</p>
@@ -1020,7 +1032,7 @@ img{max-width:100%;display:block;}
 
 <!-- ================= IMPACT ALPHA GROUP ================= -->
 <section class="section newsletter" id="alpha-group">
-  <div class="overline center" data-reveal>Beyond Impact Earnings</div>
+  <div class="overline center violet" data-reveal>Beyond Impact Earnings</div>
   <h2 class="h-lg" data-reveal>From financial innovation to <em>real-world impact.</em></h2>
   <p class="indiv-copy" data-reveal>Francene also leads Impact Alpha Group, a strategic development
   and partnership platform supporting complex, mission-aligned initiatives across regenerative
@@ -1210,9 +1222,10 @@ document.querySelectorAll(".marquee").forEach(mq => {
 (function(){
   const st = document.getElementById("statement");
   const words = st.textContent.trim().split(/\s+/);
-  const goldWords = new Set(["Opportunity","Understanding","opportunities","hype,"]);
+  const goldWords = new Set(["Opportunity","Understanding","hype,"]);
+  const violetWords = new Set(["opportunities"]);
   st.innerHTML = words.map(w =>
-    `<span class="w${goldWords.has(w) ? " gold" : ""}">${w}</span>`).join(" ");
+    `<span class="w${goldWords.has(w) ? " gold" : violetWords.has(w) ? " violet" : ""}">${w}</span>`).join(" ");
   const spans = st.querySelectorAll(".w");
   addEventListener("scroll", () => {
     const r = st.getBoundingClientRect();
