@@ -241,24 +241,6 @@ img{max-width:100%;display:block;}
   opacity:0;transform:translateY(20px);transition:opacity 1s var(--ease-out) .7s,transform 1s var(--ease-out) .7s;
 }
 .hero.play .hero-sub{opacity:1;transform:none;}
-/* ornamental brand mark filling the hero's right side */
-.hero-mark{
-  position:absolute;z-index:1;pointer-events:none;
-  right:clamp(-40px,6vw,140px);top:50%;
-  width:clamp(320px,34vw,560px);aspect-ratio:1;
-  opacity:0;transition:opacity 2.2s ease .9s;
-  filter:drop-shadow(0 0 46px rgba(217,182,113,.28));
-  animation:markspin 140s linear infinite;
-}
-.hero.play .hero-mark{opacity:.32;}
-@keyframes markspin{
-  from{transform:translateY(-50%) rotate(0deg);}
-  to{transform:translateY(-50%) rotate(360deg);}
-}
-@media (max-width:1000px){
-  .hero-mark{width:70vw;right:-28vw;}
-  .hero.play .hero-mark{opacity:.13;}
-}
 .track-card{
   position:relative;display:block;padding:28px 30px 26px;border-radius:18px;
   border:1px solid var(--line);
@@ -339,7 +321,6 @@ img{max-width:100%;display:block;}
 .philosophy .statement .w{color:var(--cream-18);transition:color .35s linear;}
 .philosophy .statement .w.lit{color:var(--cream);}
 .philosophy .statement .w.gold.lit{color:var(--gold);font-style:italic;}
-.philosophy .statement .w.violet.lit{color:var(--violet);font-style:italic;}
 .philosophy-tail{
   margin-top:52px;display:flex;gap:20px;align-items:center;
   font-family:var(--font-m);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-38);
@@ -510,7 +491,7 @@ img{max-width:100%;display:block;}
 .pillar{
   border:1px solid var(--line-soft);border-radius:14px;padding:20px 18px;text-align:center;
 }
-.pillar b{font-family:var(--font-d);font-style:italic;font-weight:400;font-size:17px;color:var(--gold);display:block;margin-bottom:4px;}
+.pillar b{font-family:var(--font-d);font-style:italic;font-weight:400;font-size:17px;color:var(--violet);display:block;margin-bottom:4px;}
 .pillar span{font-family:var(--font-m);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cream-38);}
 .partner-strip{
   margin-top:26px;display:flex;gap:20px;align-items:center;padding:22px 26px;border-radius:18px;
@@ -555,17 +536,12 @@ img{max-width:100%;display:block;}
 .news-cta{margin:44px auto 0;}
 .section.tight-top{padding-top:clamp(48px,6vw,84px);}
 .section.tight-bottom{padding-bottom:clamp(48px,6vw,84px);}
-/* violet accent rhythm — every other element leans violet, like the alpha site */
-.stat:nth-child(even) .stat-num{color:var(--violet);}
-.chip:nth-child(even):hover{border-color:var(--violet);color:var(--violet);background:rgba(167,139,250,.07);}
-.cap-row:nth-child(even) .cap-i{color:var(--violet);}
-.cap-row:nth-child(even) .cap-fill{background:linear-gradient(90deg,rgba(167,139,250,.09),rgba(217,182,113,.04));}
-.pillar:nth-child(2) b{color:var(--violet);}
+/* violet accents */
 .feat.alt{border-color:rgba(167,139,250,.22);}
 .feat.alt:hover{border-color:rgba(167,139,250,.5);}
 .feat.alt .feat-num{color:var(--violet);}
 .overline.violet{color:var(--violet);}
-.overline.violet::before{background:var(--violet);}
+.overline.violet::before,.overline.violet::after{background:var(--violet);}
 .lede-xl{font-size:clamp(18px,1.85vw,24px);line-height:1.55;max-width:46ch;color:var(--cream);font-weight:300;}
 /* full-width topic rows — same system as the alpha site's capability list */
 .cap-list{border-top:1px solid var(--line-soft);}
@@ -808,23 +784,6 @@ img{max-width:100%;display:block;}
     <p class="hero-sub">Clear, experience-led education on digital assets, markets, automation,
       security and emerging opportunities.</p>
   </div>
-  <div class="hero-mark" aria-hidden="true">
-    <svg viewBox="0 0 200 200" fill="none" stroke="#d9b671" stroke-width="1.4" stroke-linejoin="round">
-      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z"/>
-      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(90 100 100)"/>
-      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(180 100 100)"/>
-      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(270 100 100)"/>
-      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z"/>
-      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(90 100 100)"/>
-      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(180 100 100)"/>
-      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(270 100 100)"/>
-      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z"/>
-      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(90 100 100)"/>
-      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(180 100 100)"/>
-      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(270 100 100)"/>
-      <path d="M100 88 112 100 100 112 88 100Z" fill="#d9b671" stroke="none"/>
-    </svg>
-  </div>
   <div class="hero-scrollcue">Scroll <i></i></div>
 </header>
 
@@ -880,9 +839,9 @@ img{max-width:100%;display:block;}
     </div>
   </div>
   <div class="feat-grid" data-reveal-stagger>
-    <div class="feat" data-tilt data-hover>
+    <div class="feat alt" data-tilt data-hover>
       <span class="feat-num">01</span>
-      <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M12 21 V9 M12 13 C8 11.5 5 8.5 5 4 C9.5 5 12 8 12 12 M12 12 C12 8 14.5 5 19 4 C19 8.5 16 11.5 12 13"/></svg></div>
+      <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.4"><path d="M12 21 V9 M12 13 C8 11.5 5 8.5 5 4 C9.5 5 12 8 12 12 M12 12 C12 8 14.5 5 19 4 C19 8.5 16 11.5 12 13"/></svg></div>
       <h4>Start with understanding</h4>
       <p>Learn how digital assets, wallets, exchanges, custody and market cycles actually work before putting money at risk.</p>
       <p style="margin-top:10px">Impact Earnings breaks down complex ideas into practical, understandable education so you can make more informed decisions.</p>
@@ -894,9 +853,9 @@ img{max-width:100%;display:block;}
       <p>Understand automated trading, decentralized finance, AI-driven tools and new financial technologies — including how they work, where potential value may come from and what risks deserve attention.</p>
       <p style="margin-top:10px">Education first. No hype. No guarantees.</p>
     </div>
-    <div class="feat" data-tilt data-hover>
+    <div class="feat alt" data-tilt data-hover>
       <span class="feat-num">03</span>
-      <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M12 3 L20 7 V12 C20 17 16.5 20 12 21 C7.5 20 4 17 4 12 V7 Z M8.5 12 L11 14.5 L15.5 9.5"/></svg></div>
+      <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.4"><path d="M12 3 L20 7 V12 C20 17 16.5 20 12 21 C7.5 20 4 17 4 12 V7 Z M8.5 12 L11 14.5 L15.5 9.5"/></svg></div>
       <h4>Protect what you build</h4>
       <p>Develop stronger habits around wallets, passwords, devices, self-custody, platform security and scam avoidance.</p>
       <p style="margin-top:10px">Apply an institutional risk mindset to your personal digital-asset activity.</p>
@@ -1223,9 +1182,8 @@ document.querySelectorAll(".marquee").forEach(mq => {
   const st = document.getElementById("statement");
   const words = st.textContent.trim().split(/\s+/);
   const goldWords = new Set(["Opportunity","Understanding","hype,"]);
-  const violetWords = new Set(["opportunities"]);
   st.innerHTML = words.map(w =>
-    `<span class="w${goldWords.has(w) ? " gold" : violetWords.has(w) ? " violet" : ""}">${w}</span>`).join(" ");
+    `<span class="w${goldWords.has(w) ? " gold" : ""}">${w}</span>`).join(" ");
   const spans = st.querySelectorAll(".w");
   addEventListener("scroll", () => {
     const r = st.getBoundingClientRect();
