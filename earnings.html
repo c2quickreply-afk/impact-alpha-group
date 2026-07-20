@@ -241,12 +241,24 @@ img{max-width:100%;display:block;}
   opacity:0;transform:translateY(20px);transition:opacity 1s var(--ease-out) .7s,transform 1s var(--ease-out) .7s;
 }
 .hero.play .hero-sub{opacity:1;transform:none;}
-/* hero CTA pair */
-.hero-ctas{
-  margin-top:clamp(36px,4.5vh,56px);display:flex;gap:16px;flex-wrap:wrap;align-items:center;
-  opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease-out) 1s,transform 1s var(--ease-out) 1s;
+/* ornamental brand mark filling the hero's right side */
+.hero-mark{
+  position:absolute;z-index:1;pointer-events:none;
+  right:clamp(-40px,6vw,140px);top:50%;
+  width:clamp(320px,34vw,560px);aspect-ratio:1;
+  opacity:0;transition:opacity 2.2s ease .9s;
+  filter:drop-shadow(0 0 46px rgba(217,182,113,.28));
+  animation:markspin 140s linear infinite;
 }
-.hero.play .hero-ctas{opacity:1;transform:none;}
+.hero.play .hero-mark{opacity:.32;}
+@keyframes markspin{
+  from{transform:translateY(-50%) rotate(0deg);}
+  to{transform:translateY(-50%) rotate(360deg);}
+}
+@media (max-width:1000px){
+  .hero-mark{width:70vw;right:-28vw;}
+  .hero.play .hero-mark{opacity:.13;}
+}
 .track-card{
   position:relative;display:block;padding:28px 30px 26px;border-radius:18px;
   border:1px solid var(--line);
@@ -446,7 +458,7 @@ img{max-width:100%;display:block;}
    ABOUT
    ============================================================ */
 .about{border-top:1px solid var(--line-soft);}
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,100px);align-items:start;}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,100px);align-items:center;}
 .portrait{
   position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;
   border:1px solid var(--line);
@@ -541,6 +553,8 @@ img{max-width:100%;display:block;}
 .news-form button:hover{background:var(--gold-hi);}
 .news-cta{margin:44px auto 0;}
 .section.tight-top{padding-top:clamp(48px,6vw,84px);}
+.section.tight-bottom{padding-bottom:clamp(48px,6vw,84px);}
+.lede-xl{font-size:clamp(18px,1.85vw,24px);line-height:1.55;max-width:46ch;color:var(--cream);font-weight:300;}
 /* full-width topic rows — same system as the alpha site's capability list */
 .cap-list{border-top:1px solid var(--line-soft);}
 .cap-row{
@@ -692,7 +706,6 @@ img{max-width:100%;display:block;}
 @media (max-width:760px){
   .nav-link{display:none;}           /* text links collapse… */
   .btn-book{padding:12px 20px;}      /* …but Book a Call never leaves the nav */
-  .hero-ctas{flex-direction:column;align-items:flex-start;}
   .hero-scrollcue{display:none;}
   .pillars{grid-template-columns:1fr;}
 }
@@ -703,7 +716,6 @@ img{max-width:100%;display:block;}
   .hero-kicker{margin-bottom:18px;}
   .hero-title{font-size:clamp(40px,6.4vw,84px);}
   .hero-sub{margin-top:20px;font-size:15px;}
-  .hero-ctas{margin-top:28px;}
   .track-card{padding:20px 24px 18px;}
   .track-card .tc-num{margin-bottom:14px;}
 }
@@ -783,10 +795,23 @@ img{max-width:100%;display:block;}
     </h1>
     <p class="hero-sub">Clear, experience-led education on digital assets, markets, automation,
       security and emerging opportunities.</p>
-    <div class="hero-ctas">
-      <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Explore the Latest Insights <span class="arr">→</span></a>
-      <a href="https://go.impactearnings.com/register-3624" target="_blank" rel="noopener" class="btn-ghost" data-hover>Join the Community</a>
-    </div>
+  </div>
+  <div class="hero-mark" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" stroke="#d9b671" stroke-width="1.4" stroke-linejoin="round">
+      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z"/>
+      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(90 100 100)"/>
+      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(180 100 100)"/>
+      <path d="M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z" transform="rotate(270 100 100)"/>
+      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z"/>
+      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(90 100 100)"/>
+      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(180 100 100)"/>
+      <path d="M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z" transform="rotate(270 100 100)"/>
+      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z"/>
+      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(90 100 100)"/>
+      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(180 100 100)"/>
+      <path d="M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z" transform="rotate(270 100 100)"/>
+      <path d="M100 88 112 100 100 112 88 100Z" fill="#d9b671" stroke="none"/>
+    </svg>
   </div>
   <div class="hero-scrollcue">Scroll <i></i></div>
 </header>
@@ -812,7 +837,7 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ================= PHILOSOPHY ================= -->
-<section class="section philosophy" id="philosophy">
+<section class="section philosophy tight-bottom" id="philosophy">
   <div class="overline" data-reveal>Our thesis</div>
   <p class="statement" id="statement">
     Opportunity is evolving. Understanding must come first. The financial landscape is changing
@@ -826,20 +851,16 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- ================= TRACK 1 : IMPACT EARNINGS ================= -->
-<section class="section track-section tight-top" id="earnings">
+<section class="section track-section tight-top tight-bottom" id="earnings">
   <div class="track-head">
     <div data-reveal>
       <div class="overline">The Impact Earnings mission</div>
       <h2 class="h-lg">Leveling the playing field, <em>one person at a time.</em></h2>
     </div>
     <div data-reveal>
-      <p class="lede">Digital assets, automated trading, market trends, emerging technologies and
-      crypto security, explained in plain language by someone with more than 25 years of
-      experience in financial markets.</p>
-      <p class="lede" style="margin-top:14px">Tools and opportunities once reserved for
-      institutions are becoming available to everyone. Impact Earnings helps people understand
-      what is changing, evaluate opportunities more carefully and participate with greater
-      clarity and confidence, not hype.</p>
+      <p class="lede lede-xl">Digital assets, automated trading, market trends, emerging
+      technologies and crypto security, explained in plain language by someone with more than
+      25 years of experience in financial markets.</p>
       <div class="chip-row">
         <span class="chip">Digital Assets</span><span class="chip">Automated Trading</span>
         <span class="chip">Crypto Security</span><span class="chip">Emerging Opportunities</span>
