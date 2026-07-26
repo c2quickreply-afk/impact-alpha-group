@@ -318,6 +318,11 @@ img{max-width:100%;display:block;}
   font-family:var(--font-d);font-weight:300;
   font-size:clamp(28px,4.2vw,58px);line-height:1.28;letter-spacing:-.005em;
 }
+.philosophy .statement-lede{
+  font-family:var(--font-d);font-weight:300;font-style:italic;color:var(--gold);
+  font-size:clamp(28px,4.2vw,58px);line-height:1.28;letter-spacing:-.005em;
+  margin-bottom:34px;
+}
 .philosophy .statement .w{color:var(--cream-18);transition:color .35s linear;}
 .philosophy .statement .w.lit{color:var(--cream);}
 .philosophy .statement .w.gold.lit{color:var(--gold);font-style:italic;}
@@ -810,8 +815,9 @@ img{max-width:100%;display:block;}
 <!-- ================= PHILOSOPHY ================= -->
 <section class="section philosophy tight-bottom" id="philosophy">
   <div class="overline" data-reveal>Our thesis</div>
+  <p class="statement-lede" data-reveal>Opportunity is evolving. Understanding comes first.</p>
   <p class="statement" id="statement">
-    Opportunity is evolving. Understanding comes first. The financial landscape is changing
+    The financial landscape is changing
     quickly. Digital assets, artificial intelligence, automation, and new models of ownership are
     opening doors that were once largely reserved for institutions. But with greater access comes
     more noise, more complexity, and more to navigate. Impact Earnings exists to help individuals
@@ -1182,7 +1188,7 @@ document.querySelectorAll(".marquee").forEach(mq => {
 (function(){
   const st = document.getElementById("statement");
   const words = st.textContent.trim().split(/\s+/);
-  const goldWords = new Set(["Opportunity","Understanding","hype,"]);
+  const goldWords = new Set(["hype,"]);
   st.innerHTML = words.map(w =>
     `<span class="w${goldWords.has(w) ? " gold" : ""}">${w}</span>`).join(" ");
   const spans = st.querySelectorAll(".w");

@@ -327,6 +327,11 @@ img{max-width:100%;display:block;}
   font-family:var(--font-d);font-weight:300;
   font-size:clamp(28px,4.2vw,58px);line-height:1.28;letter-spacing:-.005em;
 }
+.philosophy .statement-lede{
+  font-family:var(--font-d);font-weight:300;font-style:italic;color:var(--gold);
+  font-size:clamp(28px,4.2vw,58px);line-height:1.28;letter-spacing:-.005em;
+  margin-bottom:34px;
+}
 .philosophy .statement .w{color:var(--cream-18);transition:color .35s linear;}
 .philosophy .statement .w.lit{color:var(--cream);}
 .philosophy .statement .w.gold.lit{color:var(--gold);font-style:italic;}
@@ -820,8 +825,9 @@ img{max-width:100%;display:block;}
 <!-- ================= PHILOSOPHY ================= -->
 <section class="section philosophy" id="philosophy">
   <div class="overline" data-reveal>The thesis</div>
+  <p class="statement-lede" data-reveal>Capital is powerful. Alignment is everything.</p>
   <p class="statement" id="statement">
-    Capital is powerful. Alignment is everything. In complex initiatives, the greatest constraint
+    In complex initiatives, the greatest constraint
     is rarely money — it’s aligning leadership, capital partners, strategic partners, and the many
     stakeholders needed to move a vision forward. But alignment doesn’t happen on paper. It’s built
     through trust, strong relationships, clear communication, and a shared commitment to the vision
@@ -1250,7 +1256,7 @@ document.querySelectorAll(".marquee").forEach(mq => {
 (function(){
   const st = document.getElementById("statement");
   const words = st.textContent.trim().split(/\s+/);
-  const goldWords = new Set(["Alignment","alignment","sync,","momentum"]);
+  const goldWords = new Set(["alignment","momentum"]);
   st.innerHTML = words.map(w =>
     `<span class="w${goldWords.has(w) ? " gold" : ""}">${w}</span>`).join(" ");
   const spans = st.querySelectorAll(".w");
