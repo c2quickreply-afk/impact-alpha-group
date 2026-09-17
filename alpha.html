@@ -453,10 +453,15 @@ img{max-width:100%;display:block;}
 /* ============================================================
    ABOUT
    ============================================================ */
-.about{border-top:1px solid var(--line-soft);}
-.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,100px);align-items:start;}
+.about{border-top:1px solid var(--line-soft);padding-bottom:clamp(66px,8vw,104px);}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,100px);align-items:stretch;}
+/* left column: the partner note keeps its natural height and the portrait
+   flexes to absorb whatever the bio column leaves over, so the two columns
+   always end on the same line — no dead space under the photo */
+.about-left{display:flex;flex-direction:column;gap:26px;max-width:560px;}
 .portrait{
-  position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;
+  flex:1 1 auto;position:relative;border-radius:24px;overflow:hidden;
+  min-height:clamp(300px,22vw,400px);
   border:1px solid var(--line);
   background:
     radial-gradient(120% 100% at 30% 0%,rgba(44,122,85,.35),transparent 55%),
@@ -499,6 +504,7 @@ img{max-width:100%;display:block;}
 }
 .portrait figcaption b{font-family:var(--font-d);font-weight:500;font-size:19px;display:block;}
 .portrait figcaption small{font-family:var(--font-m);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+.about-body .cta-row{margin-top:clamp(30px,3.4vw,44px);}
 .about-body p{color:var(--cream-60);font-size:clamp(15px,1.3vw,17px);margin-bottom:20px;max-width:60ch;}
 .about-body p b{color:var(--cream);font-weight:400;}
 /* the five principles: Trust · Alignment · Stewardship · Excellence · Service */
@@ -509,7 +515,9 @@ img{max-width:100%;display:block;}
 .pillar b{font-family:var(--font-d);font-style:italic;font-weight:400;font-size:16px;color:var(--gold);display:block;margin-bottom:4px;}
 .pillar span{font-family:var(--font-m);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-38);}
 .partner-strip{
-  margin-top:26px;display:flex;gap:20px;align-items:center;padding:22px 26px;border-radius:18px;
+  display:flex;flex-direction:column;gap:14px;
+  flex:0 0 auto;align-items:center;justify-content:center;text-align:center;
+  padding:30px 30px;border-radius:18px;
   border:1px solid var(--line-soft);background:rgba(16,36,26,.35);
 }
 .partner-strip .avatar{
@@ -517,8 +525,15 @@ img{max-width:100%;display:block;}
   border:1px solid var(--line);font-family:var(--font-d);font-style:italic;color:var(--violet);font-size:22px;
   background:rgba(109,81,179,.12);
 }
-.partner-strip b{font-family:var(--font-d);font-weight:500;font-size:16px;display:block;}
-.partner-strip p{font-size:clamp(15px,1.3vw,17px);color:var(--cream-60);margin-top:4px;}
+.partner-strip b{font-family:var(--font-d);font-weight:500;font-size:19px;display:block;}
+.partner-strip .partner-role{
+  display:block;margin-top:6px;font-family:var(--font-m);font-size:10px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+}
+.partner-strip p{
+  font-size:clamp(14px,1.15vw,16px);line-height:1.66;color:var(--cream-60);
+  margin-top:12px;
+}
 
 /* ============================================================
    NEWSLETTER
@@ -568,7 +583,7 @@ img{max-width:100%;display:block;}
 /* ============================================================
    BOOK
    ============================================================ */
-.book{border-top:1px solid var(--line-soft);overflow:hidden;position:relative;}
+.book{border-top:1px solid var(--line-soft);overflow:hidden;position:relative;padding-top:clamp(66px,8vw,104px);}
 .book-aurora{position:absolute;inset:0;pointer-events:none;
   background:
    radial-gradient(50% 80% at 15% 100%,rgba(44,122,85,.2),transparent 60%),
@@ -673,7 +688,11 @@ img{max-width:100%;display:block;}
   .feat-grid{grid-template-columns:1fr;}
   .track-head{grid-template-columns:1fr;}
   .about-grid{grid-template-columns:1fr;}
-  .portrait{max-width:440px;}
+  /* stacked: photo, then Francene's own story, then the partner note */
+  .about-left{display:contents;}
+  .portrait{order:1;max-width:440px;flex:0 0 auto;aspect-ratio:4/5;min-height:0;}
+  .about-body{order:2;}
+  .partner-strip{order:3;}
   .book-grid{grid-template-columns:1fr;}
   .proof-grid{grid-template-columns:1fr;}
 }
@@ -971,11 +990,29 @@ img{max-width:100%;display:block;}
 <section class="section about" id="about">
   <div class="overline" data-reveal>The people</div>
   <div class="about-grid">
-    <figure class="portrait" data-reveal data-tilt data-hover>
-      <img class="portrait-photo" src="francene.jpg" alt="Francene Loomiller">
-      <span class="portrait-ring"></span>
-      <figcaption><small>Founder · Impact Alpha Group</small><b>Francene Loomiller</b></figcaption>
-    </figure>
+    <div class="about-left">
+      <figure class="portrait" data-reveal data-tilt data-hover>
+        <img class="portrait-photo" src="francene.jpg" alt="Francene Loomiller">
+        <span class="portrait-ring"></span>
+        <figcaption><small>Founder · Impact Alpha Group</small><b>Francene Loomiller</b></figcaption>
+      </figure>
+      <!-- Helen's note sits under the portrait, centered, and closes out the
+           column level with the Meet Francene button opposite it -->
+      <div class="partner-strip" data-reveal data-hover>
+        <span class="avatar">H</span>
+        <div>
+          <b>Helen Korb</b>
+          <span class="partner-role">Financial Strategy &amp; Operational Excellence</span>
+          <p>Helen brings 25+ years in financial analysis, institutional finance, and compliance —
+          building the forecasting, reporting, and accountability frameworks that keep complex
+          initiatives visible and on track. Her discipline is the counterweight to momentum:
+          commitments are modeled before they are made, timelines are tested against reality, and
+          every partner knows exactly where an initiative stands. Together they draw on a vetted
+          network of lenders, grant strategists, engineers, and technical advisors, engaged as each
+          initiative requires.</p>
+        </div>
+      </div>
+    </div>
     <div class="about-body">
       <h2 class="h-lg" data-reveal style="margin-bottom:30px">Trust, cultivated over <em>25 years.</em></h2>
       <div data-reveal-stagger>
@@ -1002,16 +1039,6 @@ img{max-width:100%;display:block;}
           <div class="pillar"><b>Stewardship</b><span>long-term care</span></div>
           <div class="pillar"><b>Excellence</b><span>clear systems</span></div>
           <div class="pillar"><b>Service</b><span>the measure</span></div>
-        </div>
-        <div class="partner-strip" data-hover>
-          <span class="avatar">H</span>
-          <div>
-            <b>Helen Korb — Financial Strategy & Operational Excellence</b>
-            <p>Helen brings 25+ years in financial analysis, institutional finance, and compliance —
-            building the forecasting, reporting, and accountability frameworks that keep complex
-            initiatives visible and on track. Together they draw on a vetted network of lenders,
-            grant strategists, engineers, and technical advisors, engaged as each initiative requires.</p>
-          </div>
         </div>
       </div>
       <div class="cta-row" data-reveal>
