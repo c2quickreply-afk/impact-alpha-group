@@ -17,6 +17,33 @@ static host.
   institutions.
 - Both tracks route to cal.com booking links.
 
+## Security headers
+
+Security headers are set in [`vercel.json`](vercel.json) — they are response headers only and
+change nothing about how the site looks or behaves.
+
+The Content-Security-Policy allows exactly what the pages use: Google Fonts
+(`fonts.googleapis.com` / `fonts.gstatic.com`), the contact form's `fetch` to `formsubmit.co`,
+and a `data:` favicon. Everything else is denied.
+
+> **⚠️ If you edit the `<script>` block in `alpha.html` or `earnings.html`, you must update the
+> CSP hash or that page's JavaScript will stop running.** The page will still look correct, so
+> the breakage is easy to miss — scroll animations and the contact form would silently fail.
+
+Regenerate the hashes and paste them into the `script-src` directive in `vercel.json`:
+
+```bash
+node -e "const fs=require('fs'),c=require('crypto');for(const f of ['alpha.html','earnings.html']){const b=fs.readFileSync(f),s=b.toString('binary'),a=s.indexOf('<script>')+8,z=s.indexOf('</script>',a);console.log(f+'  sha256-'+c.createHash('sha256').update(b.slice(a,z)).digest('base64'))}"
+```
+
+Editing the `<style>` block or any `style="..."` attribute is safe and needs no update.
+
+After deploying, confirm the headers are live and the console is free of CSP errors:
+
+```bash
+curl -sI https://impactalphagroup.com | grep -i -E "content-security|strict-transport|x-frame"
+```
+
 ## Before launch
 
 Search `index.html` for `REPLACE` comments and swap in:
