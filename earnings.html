@@ -4,11 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Impact Earnings — Where Opportunity Meets Understanding</title>
-<meta name="description" content="Impact Earnings & Impact Alpha Group — capital strategy, digital asset education, and strategic partnerships led by Francene Loomiller. Where capital meets alignment.">
+<meta name="description" content="Impact Earnings: plain-language education on digital assets, security, automation and emerging technology, led by Francene Loomiller. Education only, not financial advice.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='44' fill='%23050a07'/%3E%3Cg stroke='%23d9b671' stroke-width='6' fill='none' stroke-linejoin='round'%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z'/%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z' transform='rotate(90 100 100)'/%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z' transform='rotate(180 100 100)'/%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z' transform='rotate(270 100 100)'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z' transform='rotate(90 100 100)'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z' transform='rotate(180 100 100)'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z' transform='rotate(270 100 100)'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z' transform='rotate(90 100 100)'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z' transform='rotate(180 100 100)'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z' transform='rotate(270 100 100)'/%3E%3C/g%3E%3Cpath d='M100 88 112 100 100 112 88 100Z' fill='%23d9b671'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600&family=Spline+Sans+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 /* ============================================================
    IMPACT EARNINGS — design system
@@ -295,7 +293,7 @@ img{max-width:100%;display:block;}
   position:relative;
   border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
   background:linear-gradient(180deg,rgba(12,26,16,.5),rgba(5,10,7,0));
-  display:grid;grid-template-columns:repeat(4,1fr);
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
 }
 .stat{
   padding:clamp(36px,4vw,60px) clamp(20px,3vw,48px);
@@ -323,7 +321,7 @@ img{max-width:100%;display:block;}
   font-size:clamp(28px,4.2vw,58px);line-height:1.28;letter-spacing:-.005em;
   margin-bottom:34px;
 }
-.philosophy .statement .w{color:var(--cream-18);transition:color .35s linear;}
+.philosophy .statement .w{color:rgba(242,236,217,.4);transition:color .35s linear;}
 .philosophy .statement .w.lit{color:var(--cream);}
 .philosophy .statement .w.gold.lit{color:var(--gold);font-style:italic;}
 .philosophy-tail{
@@ -368,7 +366,7 @@ img{max-width:100%;display:block;}
   transform:translateZ(30px);
 }
 .feat-icon svg{width:24px;height:24px;}
-.feat h4{font-family:var(--font-d);font-weight:400;font-size:22px;margin:26px 0 10px;transform:translateZ(24px);}
+.feat h3{font-family:var(--font-d);font-weight:400;font-size:22px;margin:26px 0 10px;transform:translateZ(24px);}
 .feat p{font-size:14px;color:var(--cream-60);transform:translateZ(18px);}
 .feat .feat-num{
   position:absolute;top:26px;right:28px;font-family:var(--font-m);font-size:10.5px;
@@ -413,7 +411,7 @@ img{max-width:100%;display:block;}
 }
 .cap-row:hover .cap-fill{transform:scaleY(1);}
 .cap-row .cap-i{font-family:var(--font-m);font-size:11px;letter-spacing:.2em;color:var(--gold);position:relative;}
-.cap-row h4{
+.cap-row h3{
   position:relative;font-family:var(--font-d);font-weight:400;font-size:clamp(20px,2.4vw,32px);
   transition:transform .5s var(--ease-out);
 }
@@ -560,7 +558,7 @@ img{max-width:100%;display:block;}
 }
 .cap-row:hover .cap-fill{transform:scaleY(1);}
 .cap-row .cap-i{font-family:var(--font-m);font-size:11px;letter-spacing:.2em;color:var(--gold);position:relative;}
-.cap-row h4{
+.cap-row h3{
   position:relative;font-family:var(--font-d);font-weight:400;font-size:clamp(20px,2.4vw,32px);
   transition:transform .5s var(--ease-out);
 }
@@ -662,7 +660,7 @@ img{max-width:100%;display:block;}
 .footer{border-top:1px solid var(--line-soft);padding:clamp(48px,6vw,80px) clamp(20px,6vw,96px) 34px;}
 .footer-word{
   font-family:var(--font-d);font-weight:300;letter-spacing:.02em;
-  font-size:clamp(44px,9vw,140px);line-height:1;
+  font-size:clamp(28px,9vw,140px);line-height:1;
   -webkit-text-stroke:1px rgba(217,182,113,.4);color:transparent;
   transition:color .6s;white-space:nowrap;
 }
@@ -685,7 +683,7 @@ img{max-width:100%;display:block;}
    RESPONSIVE
    ============================================================ */
 @media (max-width:1000px){
-  .stats{grid-template-columns:repeat(2,1fr);}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));}
   .stat:nth-child(3){border-left:none;}
   .stat{border-top:1px solid var(--line-soft);}
   .stat:nth-child(-n+2){border-top:none;}
@@ -712,6 +710,21 @@ img{max-width:100%;display:block;}
   .track-card{padding:20px 24px 18px;}
   .track-card .tc-num{margin-bottom:14px;}
 }
+/* accessibility helpers (compliance pass) */
+.skip{position:absolute;left:12px;top:-80px;z-index:10000;padding:10px 16px;background:var(--gold);color:var(--bg-0);font-family:var(--font-b);font-weight:500;border-radius:4px;transition:top .2s;}
+.skip:focus{top:12px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+.hp{display:none!important;}
+.form-status{min-height:1.4em;margin-top:14px;font-size:13px;color:var(--cream-60);text-align:center;}
+.footer .motion-toggle{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;transition:color .3s;}
+.footer .motion-toggle:hover{color:var(--gold);}
+.motion-paused *,.motion-paused *::before,.motion-paused *::after{animation-play-state:paused!important;}
+/* narrow phones (320px reflow): one stat per row */
+@media (max-width:374px){
+  .stats{grid-template-columns:1fr;}
+  .stat,.stat:nth-child(3){border-left:none;border-top:1px solid var(--line-soft);}
+  .stat:first-child{border-top:none;}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important;}
   html{scroll-behavior:auto;}
@@ -720,6 +733,7 @@ img{max-width:100%;display:block;}
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
@@ -775,6 +789,7 @@ img{max-width:100%;display:block;}
   </div>
 </nav>
 
+<main id="main">
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
   <div class="hero-aurora"><i></i><i></i><i></i></div>
@@ -849,28 +864,28 @@ img{max-width:100%;display:block;}
     <div class="feat alt" data-tilt data-hover>
       <span class="feat-num">01</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.4"><path d="M12 21 V9 M12 13 C8 11.5 5 8.5 5 4 C9.5 5 12 8 12 12 M12 12 C12 8 14.5 5 19 4 C19 8.5 16 11.5 12 13"/></svg></div>
-      <h4>Start with understanding</h4>
+      <h3>Start with understanding</h3>
       <p>Learn how digital assets, wallets, exchanges, custody and market cycles actually work before putting money at risk.</p>
       <p style="margin-top:10px">Impact Earnings breaks down complex ideas into practical, understandable education so you can make more informed decisions.</p>
     </div>
     <div class="feat alt" data-tilt data-hover>
       <span class="feat-num">02</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.4"><path d="M3 17 L9 11 L13 15 L21 7 M15 7 h6 v6"/></svg></div>
-      <h4>Explore emerging opportunities</h4>
+      <h3>Explore emerging opportunities</h3>
       <p>Understand automated trading, decentralized finance, AI-driven tools and new financial technologies — including how they work, where potential value may come from and what risks deserve attention.</p>
       <p style="margin-top:10px">Education first. No hype. No guarantees.</p>
     </div>
     <div class="feat alt" data-tilt data-hover>
       <span class="feat-num">03</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="1.4"><path d="M12 3 L20 7 V12 C20 17 16.5 20 12 21 C7.5 20 4 17 4 12 V7 Z M8.5 12 L11 14.5 L15.5 9.5"/></svg></div>
-      <h4>Protect what you build</h4>
+      <h3>Protect what you build</h3>
       <p>Develop stronger habits around wallets, passwords, devices, self-custody, platform security and scam avoidance.</p>
       <p style="margin-top:10px">Apply an institutional risk mindset to your personal digital-asset activity.</p>
     </div>
   </div>
   <div class="cta-row" data-reveal>
-    <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Join Impact Earnings — book a free consultation <span class="arr">→</span></a>
-    <span class="cta-note">Education only, never financial advice</span>
+    <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Join Impact Earnings — book a free conversation <span class="arr">→</span></a>
+    <span class="cta-note">Education only — not investment, financial, legal or tax advice.</span>
   </div>
 </section>
 
@@ -880,27 +895,27 @@ img{max-width:100%;display:block;}
   <div class="cap-list" data-reveal-stagger style="margin-top:clamp(28px,3.5vw,48px)">
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">01</span>
-      <h4>Digital Assets & Market Trends</h4>
+      <h3>Digital Assets & Market Trends</h3>
       <p class="cap-desc">Understand cryptocurrencies, blockchain networks and the forces shaping adoption.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">02</span>
-      <h4>Automation & Emerging Technology</h4>
+      <h3>Automation & Emerging Technology</h3>
       <p class="cap-desc">Explore how AI, automated systems and new financial tools are changing participation in markets.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">03</span>
-      <h4>Security & Self-Custody</h4>
+      <h3>Security & Self-Custody</h3>
       <p class="cap-desc">Learn practical habits for protecting wallets, accounts, devices and digital assets.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">04</span>
-      <h4>Opportunities — with Discernment</h4>
-      <p class="cap-desc">Examine emerging platforms, strategies and projects through an experienced, risk-aware lens.</p>
+      <h3>Opportunities — with Discernment</h3>
+      <p class="cap-desc">Learn frameworks for evaluating emerging platforms, strategies and projects through an experienced, risk-aware lens.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">05</span>
-      <h4>Capital With Purpose</h4>
+      <h3>Capital With Purpose</h3>
       <p class="cap-desc">Discover how technology and investment can support meaningful real-world outcomes.</p>
     </div>
   </div>
@@ -959,6 +974,7 @@ img{max-width:100%;display:block;}
     <a href="https://go.impactearnings.com/home-303039" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Join The Impact Earnings Dispatch <span class="arr">→</span></a>
   </div>
   <p class="news-note" data-reveal>Weekly education on digital assets & aligned capital · unsubscribe anytime</p>
+  <p class="news-note" data-reveal>Education only — not investment, financial, legal or tax advice.</p>
 </section>
 
 <!-- ================= BOOK ================= -->
@@ -988,10 +1004,11 @@ img{max-width:100%;display:block;}
           <span class="tc-arrow"><svg width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#a78bfa" stroke-width="1.4"/></svg></span>
         </div>
         <h3>Join the <em>Community Call</em></h3>
-        <p>Join us on Zoom for a relaxed, educational conversation around digital assets, automation, emerging opportunities, security, and what’s happening in the market. From time to time, we’re also joined by special guests, project leaders, and industry experts who bring additional perspective, insight, and firsthand experience to the conversation.</p>
+        <p>Join us on Zoom for a relaxed, educational conversation around digital assets, automation, emerging opportunities, security, and what’s happening in the market. From time to time, we’re also joined by special guests and industry experts who bring additional perspective, insight, and firsthand experience to the conversation.</p>
         <span class="cc-foot">Opens call registration</span>
       </a>
       <p class="book-foot">Prefer LinkedIn? <a href="https://www.linkedin.com/in/franceneloomiller/" target="_blank" rel="noopener" data-hover>Connect with Francene →</a></p>
+      <p class="book-foot">Education only — not investment, financial, legal or tax advice.</p>
     </div>
   </div>
 </section>
@@ -1015,23 +1032,34 @@ img{max-width:100%;display:block;}
   <h2 class="h-lg" data-reveal>Reach Francene <em>directly.</em></h2>
   <form class="contact-form" data-reveal>
     <div class="cf-row">
-      <input type="text" name="cname" placeholder="Your name" required aria-label="Your name">
-      <input type="email" name="cemail" placeholder="Your email" required aria-label="Your email">
+      <label class="sr-only" for="cname">Your name</label>
+      <input type="text" id="cname" name="cname" placeholder="Your name" autocomplete="name" required>
+      <label class="sr-only" for="cemail">Your email</label>
+      <input type="email" id="cemail" name="cemail" placeholder="Your email" autocomplete="email" required>
     </div>
-    <textarea name="cmessage" rows="5" placeholder="What would you like to explore?" required aria-label="Your message"></textarea>
+    <label class="sr-only" for="cmessage">Your message</label>
+    <textarea id="cmessage" name="cmessage" rows="5" placeholder="What would you like to explore?" required></textarea>
+    <div class="hp" aria-hidden="true"><label for="c_honey">Leave this field empty</label><input type="text" id="c_honey" name="_honey" tabindex="-1" autocomplete="off"></div>
     <button type="submit" class="btn-book" data-hover data-magnetic>Send message <span class="arr">→</span></button>
+    <p class="form-status" role="status" aria-live="polite"></p>
   </form>
+  <p class="news-note" data-reveal>We’ll only use this to reply to you. <a href="/privacy" data-hover>Privacy</a> · Education only — not investment, financial, legal or tax advice.</p>
   <p class="news-note" data-reveal>Or write directly: <a href="mailto:francene@impactearnings.com" data-hover>francene@impactearnings.com</a></p>
 </section>
+
+</main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-word" data-hover>Impact Earnings</div>
-  <p class="footer-disclaimer"><b>For education only.</b> Impact Earnings and Impact Alpha Group
-  provide education, information, and coordination services. Nothing on this site is financial,
-  investment, tax, or legal advice, and nothing here is an offer or recommendation to buy or sell
-  any asset. Digital assets involve significant risk, including possible loss of principal —
-  always do your own research and consult a licensed professional before making financial decisions.</p>
+  <p class="footer-disclaimer"><b>Important information.</b> Impact Earnings provides education
+  and information only; Impact Alpha Group provides advisory and coordination services. Nothing on
+  this site, in our newsletter, on our calls, or in a conversation with Francene is investment,
+  financial, legal, or tax advice, and nothing here is an offer, solicitation, or recommendation to
+  buy or sell any security, digital asset, or other investment. Digital assets are highly volatile,
+  and you can lose some or all of the money you put in. Past results, including any examples
+  discussed, don’t guarantee future results. Always do your own research and talk with a licensed
+  professional about your own situation before making financial decisions.</p>
   <div class="footer-cols">
     <div class="col">
       <span>© 2026 Impact Earnings · Impact Alpha Group</span>
@@ -1050,7 +1078,9 @@ img{max-width:100%;display:block;}
       <a href="https://www.linkedin.com/in/franceneloomiller/" target="_blank" rel="noopener" data-hover>LinkedIn</a>
     </div>
     <div class="col">
-      <span>Not financial advice · educational only</span>
+      <span>Education only — not investment, financial, legal or tax advice.</span>
+      <a href="/privacy" data-hover>Privacy</a>
+      <button type="button" class="motion-toggle" aria-pressed="false">Pause animations</button>
     </div>
   </div>
 </footer>
@@ -1061,6 +1091,29 @@ img{max-width:100%;display:block;}
    ============================================================ */
 const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const isTouch = matchMedia("(hover: none), (pointer: coarse)").matches;
+
+/* ---------- motion control ----------
+   Ambient animation (canvas, marquee, CSS auroras) stops for visitors who ask
+   for reduced motion, and the footer "Pause animations" button stops it for
+   everyone else (WCAG 2.2.2). Animation loops check motion.paused. */
+const motion = {
+  paused: prefersReduced,
+  subs: [],
+  set(p){
+    this.paused = p;
+    document.documentElement.classList.toggle("motion-paused", p);
+    this.subs.forEach(fn => fn(p));
+    document.querySelectorAll(".motion-toggle").forEach(b => {
+      b.setAttribute("aria-pressed", p ? "true" : "false");
+      b.textContent = p ? "Play animations" : "Pause animations";
+    });
+  }
+};
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".motion-toggle").forEach(b =>
+    b.addEventListener("click", () => motion.set(!motion.paused)));
+  motion.set(motion.paused);
+});
 
 /* ---------- preloader ---------- */
 window.addEventListener("load", () => {
@@ -1119,6 +1172,7 @@ document.querySelectorAll("[data-reveal-stagger]").forEach(group => {
 const counterIO = new IntersectionObserver(entries => {
   entries.forEach(e => {
     const el = e.target;
+    if (prefersReduced) { el.textContent = el.dataset.count; return; }
     if (!e.isIntersecting) { el.textContent = "0"; el._counting = false; return; }
     if (el._counting) return;
     el._counting = true;
@@ -1173,7 +1227,9 @@ document.querySelectorAll(".marquee").forEach(mq => {
   addEventListener("resize", measure);
   addEventListener("load", measure);   // re-measure once webfonts settle
   measure();
-  (function step(){
+  let running = false;
+  function step(){
+    if (motion.paused) { running = false; return; }
     x -= speed;
     if (half > 0){
       if (x <= -half) x += half;
@@ -1181,7 +1237,10 @@ document.querySelectorAll(".marquee").forEach(mq => {
     }
     mq.style.transform = `translateX(${x}px)`;
     requestAnimationFrame(step);
-  })();
+  }
+  const go = () => { if (!running && !motion.paused) { running = true; requestAnimationFrame(step); } };
+  motion.subs.push(go);
+  go();
 });
 
 /* ---------- scroll-lit statement ---------- */
@@ -1192,6 +1251,7 @@ document.querySelectorAll(".marquee").forEach(mq => {
   st.innerHTML = words.map(w =>
     `<span class="w${goldWords.has(w) ? " gold" : ""}">${w}</span>`).join(" ");
   const spans = st.querySelectorAll(".w");
+  if (prefersReduced) { spans.forEach(s => s.classList.add("lit")); return; }
   addEventListener("scroll", () => {
     const r = st.getBoundingClientRect();
     const p = Math.min(Math.max((innerHeight*0.85 - r.top) / (r.height + innerHeight*0.4), 0), 1);
@@ -1220,9 +1280,9 @@ if (!isTouch && !prefersReduced) {
 }
 
 /* ============================================================
-   GENERATIVE GOLDEN TREE — hero canvas
-   Money grows on trees: a procedurally grown tree of light,
-   swaying in algorithmic wind, shedding golden spores.
+   GENERATIVE GOLDEN CANOPY — hero canvas
+   A procedurally grown field of branching light filaments,
+   drifting in algorithmic wind.
    ============================================================ */
 (function(){
   const cv = document.getElementById("treeCanvas");
@@ -1365,41 +1425,54 @@ if (!isTouch && !prefersReduced) {
       ctx.drawImage(s.violet ? glowViolet : glowGold, s.x - s.r, s.y - s.r, s.r*2, s.r*2);
     }
     ctx.globalAlpha = 1;
+    if (motion.paused) { looping = false; return; }
     requestAnimationFrame(frame);
   }
 
+  let looping = false;
+  const loop = () => { if (!looping) { looping = true; requestAnimationFrame(frame); } };
+  if (prefersReduced) start = -1e6;                  // draw the finished field, not the growth
   resize();
-  addEventListener("resize", () => { clearTimeout(cv._rt); cv._rt = setTimeout(resize, 200); });
-  requestAnimationFrame(frame);
+  addEventListener("resize", () => { clearTimeout(cv._rt); cv._rt = setTimeout(() => { resize(); if (motion.paused) requestAnimationFrame(frame); }, 200); });
+  motion.subs.push(p => { if (!p) loop(); });
+  if (motion.paused) requestAnimationFrame(frame);  // still frame
+  else loop();
 })();
 
-/* ---------- contact form: in-page submission, no mail client ---------- */
+/* ---------- contact form: in-page submission via FormSubmit ----------
+   FORM_ENDPOINT: when FormSubmit's random-string alias is activated, replace
+   the address in this URL with that alias (README > Contact form). Changing
+   anything in this script block means recomputing its CSP hash in vercel.json. */
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/francene@impactearnings.com";
 document.querySelectorAll(".contact-form").forEach(f => {
+  const status = f.querySelector(".form-status");
   f.addEventListener("submit", async e => {
     e.preventDefault();
-    const btn = f.querySelector("button");
+    const btn = f.querySelector("button[type=submit]");
     const orig = btn.innerHTML;
     btn.disabled = true; btn.textContent = "Sending…";
+    status.textContent = "Sending your message…";
     try {
-      const r = await fetch("https://formsubmit.co/ajax/francene@impactearnings.com", {
+      const r = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
           name: f.cname.value,
           email: f.cemail.value,
           message: f.cmessage.value,
+          _honey: f._honey.value,          // FormSubmit discards anything with this filled in
           _subject: "Website inquiry from " + f.cname.value,
           _replyto: f.cemail.value,
-          _template: "table",
-          _captcha: "false"
+          _template: "table"
         })
       });
       if (!r.ok) throw new Error("send failed");
       btn.textContent = "Message sent ✓";
+      status.textContent = "Thank you, your message was sent.";
       f.reset();
     } catch (err) {
       btn.disabled = false; btn.innerHTML = orig;
-      alert("Something went wrong sending your message — please email francene@impactearnings.com directly.");
+      status.textContent = "Something went wrong sending your message — please email francene@impactearnings.com directly.";
     }
   });
 });

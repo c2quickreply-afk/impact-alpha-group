@@ -4,14 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Impact Alpha Group — Where Capital Meets Alignment</title>
-<meta name="description" content="Impact Alpha Group is a strategic development and partnership firm for complex capital projects — community and economic development, sustainable infrastructure, workforce housing, and carbon finance. Led by Francene Loomiller. Where capital meets alignment.">
+<meta name="description" content="Impact Alpha Group provides strategic development and partnership advisory for complex, mission-driven projects — community and economic development, sustainable infrastructure, workforce housing, and carbon finance. Led by Francene Loomiller. Advisory only, not investment advice.">
 <meta property="og:title" content="Impact Alpha Group — Where Capital Meets Alignment">
-<meta property="og:description" content="Strategic development, capital pathways, and partnership stewardship for complex, mission-driven capital projects.">
+<meta property="og:description" content="Strategic development and partnership advisory for complex, mission-driven projects. Advisory only, not investment advice.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='44' fill='%23050a07'/%3E%3Cg stroke='%23d9b671' stroke-width='6' fill='none' stroke-linejoin='round'%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z'/%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z' transform='rotate(90 100 100)'/%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z' transform='rotate(180 100 100)'/%3E%3Cpath d='M106 94 A62 62 0 0 1 174 26 A62 62 0 0 1 106 94Z' transform='rotate(270 100 100)'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z' transform='rotate(90 100 100)'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z' transform='rotate(180 100 100)'/%3E%3Cpath d='M110.3 9.1 124.9 23.7 124.9 44.3 110.3 58.9 89.7 58.9 75.1 44.3 75.1 23.7 89.7 9.1Z' transform='rotate(270 100 100)'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z' transform='rotate(90 100 100)'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z' transform='rotate(180 100 100)'/%3E%3Cpath d='M102 98 A30 30 0 0 1 134 66 A30 30 0 0 1 102 98Z' transform='rotate(270 100 100)'/%3E%3C/g%3E%3Cpath d='M100 88 112 100 100 112 88 100Z' fill='%23d9b671'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600&family=Spline+Sans+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 /* ============================================================
    IMPACT ALPHA GROUP — design system
@@ -274,7 +272,7 @@ img{max-width:100%;display:block;}
 }
 .track-card:hover .tc-arrow{background:var(--gold);transform:rotate(45deg);}
 .track-card:hover .tc-arrow svg path{stroke:var(--bg-0);}
-.track-card h3{font-family:var(--font-d);font-weight:400;font-size:clamp(20px,1.9vw,27px);line-height:1.15;margin-bottom:8px;}
+.track-card h2{font-family:var(--font-d);font-weight:400;font-size:clamp(20px,1.9vw,27px);line-height:1.15;margin-bottom:8px;}
 .track-card p{font-size:13.5px;color:var(--cream-60);max-width:34ch;}
 .track-card .tc-tag{
   display:inline-block;margin-top:16px;font-family:var(--font-m);font-size:10.5px;
@@ -304,7 +302,7 @@ img{max-width:100%;display:block;}
   position:relative;
   border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);
   background:linear-gradient(180deg,rgba(12,26,16,.5),rgba(5,10,7,0));
-  display:grid;grid-template-columns:repeat(4,1fr);
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
 }
 .stat{
   padding:clamp(36px,4vw,60px) clamp(20px,3vw,48px);
@@ -332,7 +330,7 @@ img{max-width:100%;display:block;}
   font-size:clamp(28px,4.2vw,58px);line-height:1.28;letter-spacing:-.005em;
   margin-bottom:34px;
 }
-.philosophy .statement .w{color:var(--cream-18);transition:color .35s linear;}
+.philosophy .statement .w{color:rgba(242,236,217,.4);transition:color .35s linear;}
 .philosophy .statement .w.lit{color:var(--cream);}
 .philosophy .statement .w.gold.lit{color:var(--gold);font-style:italic;}
 .philosophy-tail{
@@ -377,7 +375,7 @@ img{max-width:100%;display:block;}
   transform:translateZ(30px);
 }
 .feat-icon svg{width:24px;height:24px;}
-.feat h4{font-family:var(--font-d);font-weight:400;font-size:22px;margin:26px 0 10px;transform:translateZ(24px);}
+.feat h3{font-family:var(--font-d);font-weight:400;font-size:22px;margin:26px 0 10px;transform:translateZ(24px);}
 .feat p{font-size:14px;color:var(--cream-60);transform:translateZ(18px);}
 .feat .feat-num{
   position:absolute;top:26px;right:28px;font-family:var(--font-m);font-size:10.5px;
@@ -422,7 +420,7 @@ img{max-width:100%;display:block;}
 }
 .cap-row:hover .cap-fill{transform:scaleY(1);}
 .cap-row .cap-i{font-family:var(--font-m);font-size:11px;letter-spacing:.2em;color:var(--gold);position:relative;}
-.cap-row h4{
+.cap-row h3{
   position:relative;font-family:var(--font-d);font-weight:400;font-size:clamp(20px,2.4vw,32px);
   transition:transform .5s var(--ease-out);
 }
@@ -657,7 +655,7 @@ img{max-width:100%;display:block;}
 .footer{border-top:1px solid var(--line-soft);padding:clamp(48px,6vw,80px) clamp(20px,6vw,96px) 34px;}
 .footer-word{
   font-family:var(--font-d);font-weight:300;letter-spacing:.02em;
-  font-size:clamp(44px,9vw,140px);line-height:1;
+  font-size:clamp(28px,9vw,140px);line-height:1;
   -webkit-text-stroke:1px rgba(217,182,113,.4);color:transparent;
   transition:color .6s;white-space:nowrap;
 }
@@ -681,7 +679,7 @@ img{max-width:100%;display:block;}
    ============================================================ */
 @media (max-width:1000px){
   .hero-tracks{grid-template-columns:1fr;max-width:520px;}
-  .stats{grid-template-columns:repeat(2,1fr);}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr));}
   .stat:nth-child(3){border-left:none;}
   .stat{border-top:1px solid var(--line-soft);}
   .stat:nth-child(-n+2){border-top:none;}
@@ -715,6 +713,21 @@ img{max-width:100%;display:block;}
   .track-card{padding:20px 24px 18px;}
   .track-card .tc-num{margin-bottom:14px;}
 }
+/* accessibility helpers (compliance pass) */
+.skip{position:absolute;left:12px;top:-80px;z-index:10000;padding:10px 16px;background:var(--gold);color:var(--bg-0);font-family:var(--font-b);font-weight:500;border-radius:4px;transition:top .2s;}
+.skip:focus{top:12px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+.hp{display:none!important;}
+.form-status{min-height:1.4em;margin-top:14px;font-size:13px;color:var(--cream-60);text-align:center;}
+.footer .motion-toggle{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;transition:color .3s;}
+.footer .motion-toggle:hover{color:var(--gold);}
+.motion-paused *,.motion-paused *::before,.motion-paused *::after{animation-play-state:paused!important;}
+/* narrow phones (320px reflow): one stat per row */
+@media (max-width:374px){
+  .stats{grid-template-columns:1fr;}
+  .stat,.stat:nth-child(3){border-left:none;border-top:1px solid var(--line-soft);}
+  .stat:first-child{border-top:none;}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001s!important;transition-duration:.001s!important;}
   html{scroll-behavior:auto;}
@@ -723,6 +736,7 @@ img{max-width:100%;display:block;}
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
 <div class="grain"></div>
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
@@ -777,6 +791,7 @@ img{max-width:100%;display:block;}
   </div>
 </nav>
 
+<main id="main">
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
   <div class="hero-aurora"><i></i><i></i><i></i></div>
@@ -788,15 +803,15 @@ img{max-width:100%;display:block;}
       <span class="line"><span>meets <em>alignment.</em></span></span>
     </h1>
     <p class="hero-sub">Impact Alpha Group is a strategic development and partnership firm for
-      complex, mission-driven capital projects — aligning the relationships, capital pathways,
-      and disciplined follow-through that carry multi-million to multi-billion dollar initiatives
-      from vision through implementation. Led by Francene Loomiller.</p>
+      complex, mission-driven capital projects — aligning the relationships, financing readiness,
+      and disciplined follow-through that help large-scale initiatives move from vision through
+      implementation. Led by Francene Loomiller.</p>
     <div class="hero-tracks">
       <a class="track-card alt" href="#sectors" data-hover data-tilt>
         <div class="tc-num">SECTOR 01
           <span class="tc-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#a78bfa" stroke-width="1.4"/></svg></span>
         </div>
-        <h3>Community Development</h3>
+        <h2>Community Development</h2>
         <p>Workforce and attainable housing, mixed-use, and civic infrastructure — with community benefit designed in.</p>
         <span class="tc-tag">Development · Public-Private</span>
       </a>
@@ -804,7 +819,7 @@ img{max-width:100%;display:block;}
         <div class="tc-num">SECTOR 02
           <span class="tc-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#a78bfa" stroke-width="1.4"/></svg></span>
         </div>
-        <h3>Sustainable Infrastructure</h3>
+        <h2>Sustainable Infrastructure</h2>
         <p>Regenerative construction, energy, and advanced building systems — delivered with institutional discipline.</p>
         <span class="tc-tag">Infrastructure · Regenerative</span>
       </a>
@@ -812,7 +827,7 @@ img{max-width:100%;display:block;}
         <div class="tc-num">SECTOR 03
           <span class="tc-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#a78bfa" stroke-width="1.4"/></svg></span>
         </div>
-        <h3>Carbon Finance</h3>
+        <h2>Carbon Finance</h2>
         <p>Environmental assets and carbon markets — structured into the capital stack, not bolted on after.</p>
         <span class="tc-tag">Markets · Environmental</span>
       </a>
@@ -828,16 +843,16 @@ img{max-width:100%;display:block;}
     <div class="stat-label">Years in financial markets</div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span class="suffix" style="margin:0 2px 0 0">$</span><span data-count="500">0</span><span class="suffix">K</span></div>
-    <div class="stat-label">Raised in 6 months · regenerative initiative</div>
+    <div class="stat-num"><span data-count="3">0</span></div>
+    <div class="stat-label">Focus sectors · community, infrastructure, carbon</div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span class="suffix" style="margin:0 2px 0 0">$</span><span data-count="12">0</span><span class="suffix">M+</span></div>
-    <div class="stat-label">Colorado development · in progress</div>
+    <div class="stat-num">Advisory</div>
+    <div class="stat-label">Strategy, partnerships & stakeholder coordination</div>
   </div>
   <div class="stat">
-    <div class="stat-num"><span class="suffix" style="margin:0 2px 0 0">$</span><span data-count="400">0</span><span class="suffix">M</span></div>
-    <div class="stat-label">California / Mexico project · active</div>
+    <div class="stat-num">Selective</div>
+    <div class="stat-label">Every engagement begins with alignment</div>
   </div>
 </section>
 
@@ -851,7 +866,7 @@ img{max-width:100%;display:block;}
     stakeholders needed to move a vision forward. But alignment doesn’t happen on paper. It’s built
     through trust, strong relationships, clear communication, and a shared commitment to the vision
     and the path forward. When those elements come together, momentum builds and opportunities begin
-    to compound. That’s where we come in.
+    to take shape. That’s where we come in.
   </p>
   <div class="philosophy-tail" data-reveal>Trust · Alignment · Stewardship · Execution</div>
 </section>
@@ -868,7 +883,7 @@ img{max-width:100%;display:block;}
       incentives and timelines, public mandates and private returns. We work in the sectors where
       those seams matter most, and we hold them together.</p>
       <div class="chip-row">
-        <span class="chip">Multi-million to multi-billion</span><span class="chip">Blended capital stacks</span>
+        <span class="chip">Large-scale initiatives</span><span class="chip">Blended capital stacks</span>
         <span class="chip">Grants · incentives · tax credits</span><span class="chip">Public-private</span>
       </div>
     </div>
@@ -877,19 +892,19 @@ img{max-width:100%;display:block;}
     <div class="feat" data-tilt data-hover>
       <span class="feat-num">01</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M3 21 H21 M5 21 V11 H10 V21 M10 21 V4 L15 6.5 V21 M15 21 H19 V13.5 H15"/></svg></div>
-      <h4>Community & economic development</h4>
+      <h3>Community & economic development</h3>
       <p>Workforce and attainable housing, mixed-use, and civic infrastructure — coordinating capital sources, incentive programs, and stakeholders so development creates durable value for the communities it touches.</p>
     </div>
     <div class="feat" data-tilt data-hover>
       <span class="feat-num">02</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M12 21 V9 M12 13 C8 11.5 5 8.5 5 4 C9.5 5 12 8 12 12 M12 12 C12 8 14.5 5 19 4 C19 8.5 16 11.5 12 13"/></svg></div>
-      <h4>Sustainable infrastructure</h4>
+      <h3>Sustainable infrastructure</h3>
       <p>Regenerative construction, energy and advanced building systems, and environmental restoration — projects where sustainability is structural to the capital thesis, not a marketing layer on top of it.</p>
     </div>
     <div class="feat" data-tilt data-hover>
       <span class="feat-num">03</span>
       <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#d9b671" stroke-width="1.4"><path d="M3 17 L9 11 L13 15 L21 7 M15 7 h6 v6"/></svg></div>
-      <h4>Carbon finance</h4>
+      <h3>Carbon finance</h3>
       <p>Carbon markets and environmental assets — structuring credits, offsets, and green incentives directly into a project's capital stack, where they change the economics.</p>
     </div>
   </div>
@@ -918,71 +933,71 @@ img{max-width:100%;display:block;}
   <div class="track-head">
     <div data-reveal>
       <div class="overline" style="color:var(--violet)">The approach</div>
-      <h2 class="h-lg">Where builders and aligned capital <em>converge.</em></h2>
+      <h2 class="h-lg">Where builders and aligned partners <em>converge.</em></h2>
     </div>
     <div data-reveal>
       <p class="lede">We begin with the initiative in context — vision, stakeholders, financing
-      needs, constraints — then coordinate the capital pathways, partnerships, communications,
-      and follow-through that carry multi-million to multi-billion dollar initiatives from vision
-      through implementation. Five pillars, one discipline.</p>
+      needs, constraints — then coordinate the financing readiness, partnerships, communications,
+      and follow-through that help large-scale initiatives move from vision through
+      implementation. Five pillars, one discipline.</p>
     </div>
   </div>
 
   <div class="cap-list" data-reveal-stagger>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">01</span>
-      <h4>Strategic development & positioning</h4>
+      <h3>Strategic development & positioning</h3>
       <p class="cap-desc">Clarifying the initiative's value and shaping narratives that speak directly to stakeholder priorities.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">02</span>
-      <h4>Capital pathways & financing readiness</h4>
-      <p class="cap-desc">Private lending, equity, impact capital, grants, incentives, and tax-credit programs — prepared for and connected.</p>
+      <h3>Capital pathways & financing readiness</h3>
+      <p class="cap-desc">Helping project teams understand and prepare for financing options — private lending, equity, impact capital, grants, incentives, and tax-credit programs.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">03</span>
-      <h4>Partnership & stakeholder alignment</h4>
+      <h3>Partnership & stakeholder alignment</h3>
       <p class="cap-desc">Relationships that begin with a single introduction and evolve into long-term shared objectives.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">04</span>
-      <h4>Executive communications & documentation</h4>
-      <p class="cap-desc">Executive summaries, proposals, and lender and investor materials made clear, credible, and decision-ready.</p>
+      <h3>Executive communications & documentation</h3>
+      <p class="cap-desc">Executive summaries, proposals, and financing and partner materials made clear, credible, and decision-ready.</p>
     </div>
     <div class="cap-row" data-hover>
       <span class="cap-fill"></span><span class="cap-i">05</span>
-      <h4>Organizational excellence & accountability</h4>
+      <h3>Organizational excellence & accountability</h3>
       <p class="cap-desc">Reporting, financial visibility, workflows, and follow-through that keep every commitment in view.</p>
     </div>
   </div>
 
   <div class="proof-grid" data-reveal-stagger>
     <div class="proof-card">
-      <div class="proof-amount">$500K in 6 months</div>
-      <p>Raised and secured from a standing start — advancing the early-stage development of a projected $25 billion carbon-finance initiative in Ghana.</p>
-      <span class="proof-tag">Completed raise</span>
+      <div class="proof-amount">Early-stage initiatives</div>
+      <p>Strategic positioning and stakeholder alignment for initiatives in their earliest stages of development, including international carbon-finance work.</p>
+      <span class="proof-tag">Strategic development</span>
     </div>
     <div class="proof-card">
-      <div class="proof-amount">$12M+ Colorado</div>
-      <p>Financing partner introduced and lender pre-approval received for a Colorado housing development — final due diligence underway.</p>
-      <span class="proof-tag">Financing in progress</span>
+      <div class="proof-amount">Housing & development</div>
+      <p>Financing readiness, partner coordination, and incentive planning for housing and mixed-use development.</p>
+      <span class="proof-tag">Financing readiness</span>
     </div>
     <div class="proof-card">
-      <div class="proof-amount">$400M+ initiative</div>
-      <p>Introduced capital relationships for a large-scale U.S. / Mexico climate, water-restoration, infrastructure, and community-development initiative — multiple interested financing parties currently engaged.</p>
-      <span class="proof-tag">Active capital raise</span>
+      <div class="proof-amount">Cross-border initiatives</div>
+      <p>Partner and stakeholder alignment for large-scale climate, water-restoration, infrastructure, and community-development work.</p>
+      <span class="proof-tag">Partnership alignment</span>
     </div>
     <div class="proof-card">
-      <div class="proof-amount">Millions moved</div>
-      <p>In capital and client activity — more than twenty-five years spanning institutional client development, digital-asset communities, capital introductions, and mission-driven fundraising.</p>
-      <span class="proof-tag">Career track record</span>
+      <div class="proof-amount">25+ years</div>
+      <p>Spanning institutional client development, digital-asset communities, and mission-driven organizations.</p>
+      <span class="proof-tag">Career experience</span>
     </div>
   </div>
 
   <div class="cta-row" data-reveal>
     <a href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" class="btn-book" data-hover data-magnetic>Book a consultation <span class="arr">→</span></a>
     <a href="#book" class="btn-ghost" data-hover>See how a call works</a>
-    <span class="cta-note">Selective engagement · alignment-first</span>
+    <span class="cta-note">Advisory services only — not investment, financial, legal or tax advice, and not an offer to buy or sell any security.</span>
   </div>
 </section>
 
@@ -1072,14 +1087,15 @@ img{max-width:100%;display:block;}
         <span class="cc-foot">Opens Francene's calendar</span>
       </a>
       <a class="cal-card alt" href="https://go.impactearnings.com/chatwithfrancene" target="_blank" rel="noopener" data-hover data-tilt>
-        <div class="cc-top">For capital partners
+        <div class="cc-top">For institutional partners
           <span class="tc-arrow"><svg width="13" height="13" viewBox="0 0 12 12" fill="none"><path d="M1 11 L11 1 M4 1 H11 V8" stroke="#a78bfa" stroke-width="1.4"/></svg></span>
         </div>
-        <h3>Deploy with <em>alignment.</em></h3>
-        <p>You represent private, institutional, or mission-aligned capital — and want access to rigorously coordinated projects worth backing.</p>
+        <h3>Partner with <em>alignment.</em></h3>
+        <p>You represent an institution, public agency, or mission-aligned organization — and want to explore strategic partnerships around complex projects.</p>
         <span class="cc-foot">Opens Francene's calendar</span>
       </a>
       <p class="book-foot">Prefer LinkedIn? <a href="https://www.linkedin.com/in/franceneloomiller/" target="_blank" rel="noopener" data-hover>Connect with Francene →</a></p>
+      <p class="book-foot">Advisory services only — not investment, financial, legal or tax advice, and not an offer to buy or sell any security.</p>
     </div>
   </div>
 </section>
@@ -1094,8 +1110,8 @@ img{max-width:100%;display:block;}
   understand digital assets, emerging financial technologies, and new models of participation
   in the evolving financial economy.</p>
   <p class="indiv-copy" data-reveal>Through Impact Earnings, she shares educational resources,
-  market perspectives, technology demonstrations, and selected opportunities she is personally
-  exploring with her community — distinct from Impact Alpha Group's institutional advisory
+  market perspectives, and technology demonstrations with her community — education only,
+  distinct from Impact Alpha Group's institutional advisory
   services, but informed by the same principles: relationships, education, thoughtful due
   diligence, and responsible participation.</p>
   <div class="news-cta" data-reveal>
@@ -1109,24 +1125,35 @@ img{max-width:100%;display:block;}
   <h2 class="h-lg" data-reveal>Reach Francene <em>directly.</em></h2>
   <form class="contact-form" data-reveal>
     <div class="cf-row">
-      <input type="text" name="cname" placeholder="Your name" required aria-label="Your name">
-      <input type="email" name="cemail" placeholder="Your email" required aria-label="Your email">
+      <label class="sr-only" for="cname">Your name</label>
+      <input type="text" id="cname" name="cname" placeholder="Your name" autocomplete="name" required>
+      <label class="sr-only" for="cemail">Your email</label>
+      <input type="email" id="cemail" name="cemail" placeholder="Your email" autocomplete="email" required>
     </div>
-    <textarea name="cmessage" rows="5" placeholder="What would you like to explore?" required aria-label="Your message"></textarea>
+    <label class="sr-only" for="cmessage">Your message</label>
+    <textarea id="cmessage" name="cmessage" rows="5" placeholder="What would you like to explore?" required></textarea>
+    <div class="hp" aria-hidden="true"><label for="c_honey">Leave this field empty</label><input type="text" id="c_honey" name="_honey" tabindex="-1" autocomplete="off"></div>
     <button type="submit" class="btn-book" data-hover data-magnetic>Send message <span class="arr">→</span></button>
+    <p class="form-status" role="status" aria-live="polite"></p>
   </form>
+  <p class="news-note" data-reveal>We’ll only use this to reply to you. <a href="/privacy" data-hover>Privacy</a> · Advisory services only — not investment, financial, legal or tax advice, and not an offer to buy or sell any security.</p>
   <p class="news-note" data-reveal>Or write directly: <a href="mailto:francene@impactearnings.com" data-hover>francene@impactearnings.com</a></p>
 </section>
+
+</main>
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-word" data-hover>Impact Alpha Group</div>
-  <p class="footer-disclaimer"><b>Advisory, not advice.</b> Impact Alpha Group provides advisory
-  and coordination services for complex capital projects. Nothing on this site is financial,
-  investment, tax, or legal advice, and nothing here constitutes an offer to sell — or a
-  solicitation of an offer to buy — any security or asset. Engagements are selective, and every
-  initiative described is subject to independent diligence. Consult licensed professionals before
-  making financial decisions.</p>
+  <p class="footer-disclaimer"><b>Important information.</b> Impact Alpha Group provides strategic
+  advisory and coordination services for complex projects, and this site is for general information
+  only. Nothing on this site is investment, financial, legal, or tax advice, and nothing here is an
+  offer to sell, or a solicitation of an offer to buy, any security, digital asset, or other
+  investment. Initiatives described are examples of the kinds of work we support and are subject to
+  independent diligence; past results don’t guarantee future results. Digital assets and early-stage
+  projects are volatile and involve significant risk, including the loss of some or all of the money
+  put in. Talk with licensed professionals about your own situation before making financial
+  decisions.</p>
   <div class="footer-cols">
     <div class="col">
       <span>© 2026 Impact Alpha Group</span>
@@ -1145,6 +1172,9 @@ img{max-width:100%;display:block;}
     </div>
     <div class="col">
       <span>Trust · Alignment · Stewardship · Service</span>
+      <span>Advisory services only — not investment, financial, legal or tax advice, and not an offer to buy or sell any security.</span>
+      <a href="/privacy" data-hover>Privacy</a>
+      <button type="button" class="motion-toggle" aria-pressed="false">Pause animations</button>
       <span>Site crafted with Claude</span>
     </div>
   </div>
@@ -1156,6 +1186,29 @@ img{max-width:100%;display:block;}
    ============================================================ */
 const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const isTouch = matchMedia("(hover: none), (pointer: coarse)").matches;
+
+/* ---------- motion control ----------
+   Ambient animation (canvas, marquee, CSS auroras) stops for visitors who ask
+   for reduced motion, and the footer "Pause animations" button stops it for
+   everyone else (WCAG 2.2.2). Animation loops check motion.paused. */
+const motion = {
+  paused: prefersReduced,
+  subs: [],
+  set(p){
+    this.paused = p;
+    document.documentElement.classList.toggle("motion-paused", p);
+    this.subs.forEach(fn => fn(p));
+    document.querySelectorAll(".motion-toggle").forEach(b => {
+      b.setAttribute("aria-pressed", p ? "true" : "false");
+      b.textContent = p ? "Play animations" : "Pause animations";
+    });
+  }
+};
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".motion-toggle").forEach(b =>
+    b.addEventListener("click", () => motion.set(!motion.paused)));
+  motion.set(motion.paused);
+});
 
 /* ---------- preloader ---------- */
 window.addEventListener("load", () => {
@@ -1214,6 +1267,7 @@ document.querySelectorAll("[data-reveal-stagger]").forEach(group => {
 const counterIO = new IntersectionObserver(entries => {
   entries.forEach(e => {
     const el = e.target;
+    if (prefersReduced) { el.textContent = el.dataset.count; return; }
     if (!e.isIntersecting) { el.textContent = "0"; el._counting = false; return; }
     if (el._counting) return;
     el._counting = true;
@@ -1268,7 +1322,9 @@ document.querySelectorAll(".marquee").forEach(mq => {
   addEventListener("resize", measure);
   addEventListener("load", measure);   // re-measure once webfonts settle
   measure();
-  (function step(){
+  let running = false;
+  function step(){
+    if (motion.paused) { running = false; return; }
     x -= speed;
     if (half > 0){
       if (x <= -half) x += half;
@@ -1276,7 +1332,10 @@ document.querySelectorAll(".marquee").forEach(mq => {
     }
     mq.style.transform = `translateX(${x}px)`;
     requestAnimationFrame(step);
-  })();
+  }
+  const go = () => { if (!running && !motion.paused) { running = true; requestAnimationFrame(step); } };
+  motion.subs.push(go);
+  go();
 });
 
 /* ---------- scroll-lit statement ---------- */
@@ -1287,6 +1346,7 @@ document.querySelectorAll(".marquee").forEach(mq => {
   st.innerHTML = words.map(w =>
     `<span class="w${goldWords.has(w) ? " gold" : ""}">${w}</span>`).join(" ");
   const spans = st.querySelectorAll(".w");
+  if (prefersReduced) { spans.forEach(s => s.classList.add("lit")); return; }
   addEventListener("scroll", () => {
     const r = st.getBoundingClientRect();
     const p = Math.min(Math.max((innerHeight*0.85 - r.top) / (r.height + innerHeight*0.4), 0), 1);
@@ -1316,8 +1376,8 @@ if (!isTouch && !prefersReduced) {
 
 /* ============================================================
    GENERATIVE GOLDEN CANOPY — hero canvas
-   A constellation field of branching filaments: capital networks
-   growing toward alignment, drifting in algorithmic wind.
+   A procedurally grown field of branching light filaments,
+   drifting in algorithmic wind.
    ============================================================ */
 (function(){
   const cv = document.getElementById("treeCanvas");
@@ -1460,41 +1520,54 @@ if (!isTouch && !prefersReduced) {
       ctx.drawImage(s.violet ? glowViolet : glowGold, s.x - s.r, s.y - s.r, s.r*2, s.r*2);
     }
     ctx.globalAlpha = 1;
+    if (motion.paused) { looping = false; return; }
     requestAnimationFrame(frame);
   }
 
+  let looping = false;
+  const loop = () => { if (!looping) { looping = true; requestAnimationFrame(frame); } };
+  if (prefersReduced) start = -1e6;                  // draw the finished field, not the growth
   resize();
-  addEventListener("resize", () => { clearTimeout(cv._rt); cv._rt = setTimeout(resize, 200); });
-  requestAnimationFrame(frame);
+  addEventListener("resize", () => { clearTimeout(cv._rt); cv._rt = setTimeout(() => { resize(); if (motion.paused) requestAnimationFrame(frame); }, 200); });
+  motion.subs.push(p => { if (!p) loop(); });
+  if (motion.paused) requestAnimationFrame(frame);  // still frame
+  else loop();
 })();
 
-/* ---------- contact form: in-page submission, no mail client ---------- */
+/* ---------- contact form: in-page submission via FormSubmit ----------
+   FORM_ENDPOINT: when FormSubmit's random-string alias is activated, replace
+   the address in this URL with that alias (README > Contact form). Changing
+   anything in this script block means recomputing its CSP hash in vercel.json. */
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/francene@impactearnings.com";
 document.querySelectorAll(".contact-form").forEach(f => {
+  const status = f.querySelector(".form-status");
   f.addEventListener("submit", async e => {
     e.preventDefault();
-    const btn = f.querySelector("button");
+    const btn = f.querySelector("button[type=submit]");
     const orig = btn.innerHTML;
     btn.disabled = true; btn.textContent = "Sending…";
+    status.textContent = "Sending your message…";
     try {
-      const r = await fetch("https://formsubmit.co/ajax/francene@impactearnings.com", {
+      const r = await fetch(FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
           name: f.cname.value,
           email: f.cemail.value,
           message: f.cmessage.value,
+          _honey: f._honey.value,          // FormSubmit discards anything with this filled in
           _subject: "Website inquiry from " + f.cname.value,
           _replyto: f.cemail.value,
-          _template: "table",
-          _captcha: "false"
+          _template: "table"
         })
       });
       if (!r.ok) throw new Error("send failed");
       btn.textContent = "Message sent ✓";
+      status.textContent = "Thank you, your message was sent.";
       f.reset();
     } catch (err) {
       btn.disabled = false; btn.innerHTML = orig;
-      alert("Something went wrong sending your message — please email francene@impactearnings.com directly.");
+      status.textContent = "Something went wrong sending your message — please email francene@impactearnings.com directly.";
     }
   });
 });
