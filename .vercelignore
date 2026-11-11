@@ -3,6 +3,8 @@ README.md
 CLAUDE*.md
 .claude
 .env*
+.gitattributes
+.vercelignore
 
 # Local redesign work and its dev tools (not live). Remove this line when the redesign launches.
 earnings-redesign
