@@ -1,0 +1,6 @@
+# Keep LF line endings everywhere. The CSP hashes in vercel.json are computed
+# from the inline scripts, and browsers hash them with LF endings.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.woff2 binary

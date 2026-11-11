@@ -1,0 +1,9 @@
+# Files that are not part of the website. Vercel skips these, so they can never be served.
+README.md
+CLAUDE*.md
+.claude
+.env*
+
+# Local redesign work and its dev tools (not live). Remove this line when the redesign launches.
+earnings-redesign
+_source
