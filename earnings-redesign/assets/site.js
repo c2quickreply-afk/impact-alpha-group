@@ -149,19 +149,24 @@
   var pipe = document.getElementById("pipe");
   var heroVisible = true;
   if (pipe) {
-    var nodes = $$(".pn", pipe), fill = $(".pipe-fill", pipe);
+    var nodes = $$(".pn", pipe), fill = $(".pipe-fill", pipe), packet = $(".pipe-packet", pipe);
     var detail = document.getElementById("pipeDetail");
     var stepText = [
-      "Data streams in from the market: prices, volume and news.",
-      "An AI model looks for patterns in that data.",
-      "Your rules decide what\u2019s allowed: position size, limits, stop points.",
-      "Only then is an order placed, and every step is logged for review."
+      "A new feature, update or headline appears. What actually happened?",
+      "We break it down until it\u2019s clear what it means, and what it doesn\u2019t.",
+      "Then we look at whether it fits your situation at all, and how you\u2019d approach it carefully.",
+      "Things keep changing, so we keep learning together and revisit what we know."
     ];
     var phase = 0, timer = 0;
+    /* The gold dot moves one step at a time with the progress line; after the
+       last step both jump back to the start instead of sweeping through again. */
     var setPhase = function (n) {
+      var wrap = n % 4 === 0 && phase === 3;
       phase = n % 4;
       nodes.forEach(function (el, i) { el.classList.toggle("on", i === phase); el.classList.toggle("done", i < phase); });
-      fill.style.width = (phase / 3 * 100) + "%";
+      if (wrap) pipe.classList.add("reset");
+      fill.style.width = packet.style.left = (phase / 3 * 100) + "%";
+      if (wrap) { void pipe.offsetWidth; requestAnimationFrame(function () { pipe.classList.remove("reset"); }); }
       detail.classList.add("swap");
       setTimeout(function () {
         $(".pd-n", detail).textContent = "0" + (phase + 1);

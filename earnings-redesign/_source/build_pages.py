@@ -32,6 +32,9 @@ ICON = {
     "chip": f'<svg {_S}><path d="M7 7h10v10H7z"/><path d="M10 10h4v4h-4zM10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg>',
     "sliders": f'<svg {_S}><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><path d="M14 4v4M8 10v4M16 16v4"/></svg>',
     "bolt": f'<svg {_S}><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>',
+    "news": f'<svg {_S}><path d="M4 4h13v16H6a2 2 0 0 1-2-2z"/><path d="M17 8h3v10a2 2 0 0 1-2 2M8 8h5M8 12h5M8 16h3"/></svg>',
+    "bulb": f'<svg {_S}><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9V16h7v-2.1A6 6 0 0 0 12 3z"/></svg>',
+    "refresh": f'<svg {_S}><path d="M20 11a8 8 0 0 0-14.6-4.5M4 13a8 8 0 0 0 14.6 4.5"/><path d="M5 3v4h4M19 21v-4h-4"/></svg>',
     "gear": f'<svg {_S}><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>',
     "spark": f'<svg {_S}><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>',
     "alert": f'<svg {_S}><path d="M12 3l9.5 17h-19z"/><path d="M12 10v4M12 17.5v.01"/></svg>',
@@ -76,7 +79,7 @@ PORTRAIT_CAP = "<figcaption><b>Francene Loomiller</b><small>Founder &middot; Fin
 # Visuals (illustrative; the only places with wording that isn't the original's)
 # ----------------------------------------------------------------------------
 CALL = f"""<div class="hero-visual" id="heroVisual">
-        <div class="call" data-hero style="--d:250" role="img" aria-label="Illustration of an Impact Earnings Community Call on Zoom, with Francene Loomiller presenting a teaching slide on how an automated trading strategy works">
+        <div class="call" data-hero style="--d:250" role="img" aria-label="Illustration of an Impact Earnings Community Call on Zoom, with Francene Loomiller presenting a teaching slide on how to make sense of something new in emerging technology">
           <div class="call-bar" aria-hidden="true">
             <span class="call-title">{ICON['lock']}Impact Earnings Community Call</span>
             <span class="call-time" id="callTime">00:00</span>
@@ -88,19 +91,19 @@ CALL = f"""<div class="hero-visual" id="heroVisual">
                 <div class="slide-top">
                   <div>
                     <span class="slide-eyebrow">Emerging technology</span>
-                    <p class="slide-title">How an automated strategy works</p>
+                    <p class="slide-title">How we make sense of something new</p>
                   </div>
                   <span class="tag-illus">Illustrative</span>
                 </div>
                 <div class="pipe" id="pipe">
                   <div class="pipe-track"><i class="pipe-fill"></i><i class="pipe-packet"></i></div>
-                  <div class="pn on"><span class="pn-ic">{ICON['bars']}</span><b>Market data</b><small>Prices &amp; volume</small></div>
-                  <div class="pn"><span class="pn-ic">{ICON['chip']}</span><b>AI model</b><small>Finds patterns</small></div>
-                  <div class="pn"><span class="pn-ic">{ICON['sliders']}</span><b>Your rules</b><small>Risk limits</small></div>
-                  <div class="pn"><span class="pn-ic">{ICON['bolt']}</span><b>Execution</b><small>Places the order</small></div>
+                  <div class="pn on"><span class="pn-ic">{ICON['news']}</span><b>Something new</b><small>A feature or headline</small></div>
+                  <div class="pn"><span class="pn-ic">{ICON['bulb']}</span><b>Understand it</b><small>What it really means</small></div>
+                  <div class="pn"><span class="pn-ic">{ICON['sliders']}</span><b>Make it yours</b><small>What fits you</small></div>
+                  <div class="pn"><span class="pn-ic">{ICON['refresh']}</span><b>Keep up</b><small>As it changes</small></div>
                 </div>
-                <div class="pipe-detail" id="pipeDetail"><span class="pd-n">01</span><p>Data streams in from the market: prices, volume and news.</p></div>
-                <p class="slide-note">Teaching example only, not a real strategy.</p>
+                <div class="pipe-detail" id="pipeDetail"><span class="pd-n">01</span><p>A new feature, update or headline appears. What actually happened?</p></div>
+                <p class="slide-note">Illustrative: how we work through new developments together.</p>
               </div>
             </div>
             <div class="tiles">
@@ -168,25 +171,6 @@ VIS_SEC = """<div class="vis cream" data-reveal="right">
         </div>"""
 
 
-# Helen's testimonial. Her words must come from her (the client supplies them);
-# never write a quote on her behalf. Until then this shows a marked placeholder.
-HELEN_QUOTE = ""
-TESTIMONIAL = "" if (LAUNCH and not HELEN_QUOTE) else f"""
-<section class="section tight bg-cream">
-  <div class="container">
-    <figure class="review{'' if HELEN_QUOTE else ' placeholder'}" data-reveal="scale">
-      <span class="review-mark" aria-hidden="true">&ldquo;</span>
-      <blockquote><p>{HELEN_QUOTE or "[Helen&rsquo;s testimonial goes here, in her own words.]"}</p></blockquote>
-      <figcaption>
-        <span class="avatar" aria-hidden="true">H</span>
-        <span><b>Helen Korb</b><small>Financial Strategy &amp; Operational Excellence</small></span>
-      </figcaption>
-    </figure>
-  </div>
-</section>
-"""
-
-
 # ----------------------------------------------------------------------------
 # Pages
 # ----------------------------------------------------------------------------
@@ -242,7 +226,7 @@ def home():
 
 <section class="section bg-white">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head feature-cols">
       <div data-reveal>
         <span class="eyebrow">The Community Call</span>
         <h2 class="h2">Free to join. <span class="accent">Open to everyone.</span></h2>
@@ -316,7 +300,7 @@ def home():
     </div>
   </div>
 </section>
-""" + TESTIMONIAL + cta() + footer()
+""" + cta() + footer()
 
 
 def page_head(eyebrow, title, body="", aside=""):

@@ -162,6 +162,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 .section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--gap);align-items:end;margin-bottom:clamp(32px,4vw,56px);}
 .section-head .lead{justify-self:end;}
 .section-aside{justify-self:end;max-width:58ch;}
+/* header that sits over a feature row: same columns and gap, so its text lines up with the visual below */
+.section-head.feature-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,96px);align-items:center;margin-bottom:clamp(28px,3vw,40px);}
+.section-head.feature-cols + .features > .feature:first-child{align-items:start;}
+.section-head.feature-cols + .features > .feature:first-child .feature-copy{padding-top:clamp(20px,3vw,44px);}
+.section-head.feature-cols .section-aside{justify-self:stretch;max-width:none;}
+.section-head.feature-cols .section-aside .lead{max-width:60ch;}
+/* thesis: the heading stays in view while the statement scrolls past it */
+@media (min-width:1025px){ .thesis > :first-child{position:sticky;top:calc(var(--nav-h) + 40px);} }
 .section-head.stack{grid-template-columns:1fr;gap:14px;max-width:760px;}
 .section-head.stack .lead{justify-self:start;}
 .section-head.center{margin-inline:auto;text-align:center;justify-items:center;}
@@ -290,9 +298,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
 .pipe{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px;}
 .pipe-track{position:absolute;left:12.5%;right:12.5%;top:21px;height:2px;background:var(--line);}
 .pipe-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--emerald);transition:width .9s var(--ease);}
-.pipe-packet{position:absolute;top:-3px;left:0;width:8px;height:8px;margin-left:-4px;background:var(--gold);border-radius:var(--r-sm);opacity:0;}
-.pipe.run .pipe-packet{animation:packet 2.6s var(--ease-io) infinite;}
-@keyframes packet{0%{left:0;opacity:0;}10%{opacity:1;}85%{opacity:1;}100%{left:100%;opacity:0;}}
+.pipe-packet{position:absolute;top:-3px;left:0;width:8px;height:8px;margin-left:-4px;background:var(--gold);border-radius:var(--r-sm);transition:left .9s var(--ease);}
+.pipe.reset .pipe-fill,.pipe.reset .pipe-packet{transition:none;}
 .pn{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:2px;min-width:0;}
 .pn-ic{width:44px;height:44px;display:grid;place-items:center;margin-bottom:8px;background:var(--white);border:1px solid var(--line-strong);border-radius:var(--r-md);color:var(--muted);transition:background .4s,border-color .4s,color .4s,transform .4s var(--ease);}
 .pn-ic svg{width:20px;height:20px;}
@@ -544,7 +551,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
   .loader,.loader *{animation-duration:.001s!important;transition-duration:.001s!important;}
   .js [data-reveal],.js [data-stagger]>*,.js .hero [data-hero]{transform:none!important;transition:opacity .4s linear!important;transition-delay:0s!important;}
   .pipe-fill,.ring .fg,.checks li .box svg{transition-duration:.01s!important;transition-delay:0s!important;}
-  .talk i,.flow-mid path,.pipe.run .pipe-packet{animation:none;}
+  .talk i,.flow-mid path{animation:none;}
 }
 
 /* ---------- 12. RESPONSIVE ---------------------------------------------- */
@@ -772,4 +779,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;}
   .am-core small{display:none;}
   .am-core{padding:9px 12px;}
   .am-stage{font-size:0;padding-top:6px;}   /* bar only; the caption explains each step */
+}
+
+@media (max-width:1024px){
+  .section-head.feature-cols{grid-template-columns:1fr;gap:14px;}
 }
