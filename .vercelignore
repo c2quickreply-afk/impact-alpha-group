@@ -6,6 +6,7 @@ CLAUDE*.md
 .gitattributes
 .vercelignore
 
-# Local redesign work and its dev tools (not live). Remove this line when the redesign launches.
+# Redesigns (not live yet). At launch each becomes its Vercel project's Root Directory (see README).
 earnings-redesign
+alpha-redesign
 _source

@@ -21,7 +21,18 @@ Both projects use the same [`vercel.json`](vercel.json). Host-based rewrites pic
 
 Redirects (keep these working): `/webinar`, `/newsletter` and `/chatwithfrancene` on impactearnings.com go to the matching pages on `go.impactearnings.com`. That subdomain is hosted on HighLevel (LeadConnector), not in this repo. `/alpha.html`, `/earnings.html` and `/index.html` redirect to `/`.
 
-`earnings-redesign/` is an unfinished local redesign. It's listed in [`.vercelignore`](.vercelignore), so it's never deployed even if it gets committed.
+### Redesigns (not live yet)
+
+[`earnings-redesign/`](earnings-redesign/) and [`alpha-redesign/`](alpha-redesign/) are the light, multi-page redesigns of both sites. They already carry this compliance work:
+- the same wording,
+- disclaimers,
+- a draft privacy page,
+- full headers with a stricter CSP (no inline scripts, so no hashes),
+- self-hosted fonts,
+- form hardening,
+- accessibility.
+
+Both folders are in [`.vercelignore`](.vercelignore), so the current projects never serve them. At launch, each one becomes its Vercel project's **Root Directory**. Each folder's README has the launch checklist.
 
 ## Security headers
 

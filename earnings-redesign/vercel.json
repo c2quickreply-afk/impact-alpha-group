@@ -1,0 +1,38 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://formsubmit.co; upgrade-insecure-requests"
+        },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "Permissions-Policy",
+          "value": "accelerometer=(), autoplay=(), camera=(), display-capture=(), encrypted-media=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=(), xr-spatial-tracking=()"
+        },
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" },
+        { "key": "X-XSS-Protection", "value": "0" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/webinar", "destination": "https://go.impactearnings.com/register-3624", "permanent": false },
+    { "source": "/webinar/", "destination": "https://go.impactearnings.com/register-3624", "permanent": false },
+    { "source": "/newsletter", "destination": "https://go.impactearnings.com/home-303039", "permanent": false },
+    { "source": "/newsletter/", "destination": "https://go.impactearnings.com/home-303039", "permanent": false },
+    { "source": "/chatwithfrancene", "destination": "https://go.impactearnings.com/chatwithfrancene", "permanent": false },
+    { "source": "/chatwithfrancene/", "destination": "https://go.impactearnings.com/chatwithfrancene", "permanent": false },
+    { "source": "/earnings.html", "destination": "/", "permanent": false },
+    { "source": "/earnings", "destination": "/", "permanent": false },
+    { "source": "/index", "destination": "/", "permanent": false }
+  ]
+}

@@ -1,0 +1,8 @@
+# Not part of the website: Vercel skips these so they can never be served.
+_source
+README.md
+*.md
+.gitattributes
+.vercelignore
+.env*
+.gitignore

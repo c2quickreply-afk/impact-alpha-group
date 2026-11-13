@@ -1,0 +1,31 @@
+/* ---------- preloader ---------- */
+.loader{
+  position:fixed;inset:0;z-index:400;background:var(--bg-0);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;
+  transition:opacity .8s var(--ease-io),visibility .8s;
+}
+.loader.done{opacity:0;visibility:hidden;}
+.loader-mark{width:94px;height:94px;
+  animation:emblemPop .7s cubic-bezier(.34,1.56,.64,1) 2.05s both;}
+.loader-mark path{stroke:var(--gold);fill:none;stroke-width:2;stroke-linejoin:round;
+  stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1.9s var(--ease-io) forwards;}
+.loader-mark .eo{animation-delay:.2s;}   /* octagons draw second */
+.loader-mark .ep{animation-delay:.4s;}   /* the big petals bloom last */
+@keyframes draw{to{stroke-dashoffset:0;}}
+/* the boom: emblem completes, swells, and settles with a lasting glow */
+@keyframes emblemPop{
+  0%{transform:scale(1);}
+  55%{transform:scale(1.14);filter:drop-shadow(0 0 36px rgba(217,182,113,.9));}
+  100%{transform:scale(1);filter:drop-shadow(0 0 16px rgba(217,182,113,.45));}
+}
+.loader-word{
+  font-family:var(--font-m);font-size:11px;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--cream-60);overflow:hidden;
+}
+.loader-word span{display:inline-block;animation:rise 1s var(--ease-out) .4s both;}
+@keyframes rise{from{transform:translateY(120%);}to{transform:translateY(0);}}
+.loader-bar{width:180px;height:1px;background:var(--cream-18);overflow:hidden;}
+.loader-bar i{display:block;height:100%;width:100%;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;animation:fill 2s var(--ease-io) .2s forwards;}
+@keyframes fill{to{transform:scaleX(1);}}
+
