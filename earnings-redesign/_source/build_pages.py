@@ -97,12 +97,12 @@ CALL = f"""<div class="hero-visual" id="heroVisual">
                 </div>
                 <div class="pipe" id="pipe">
                   <div class="pipe-track"><i class="pipe-fill"></i><i class="pipe-packet"></i></div>
-                  <div class="pn on"><span class="pn-ic">{ICON['news']}</span><b>Something new</b><small>A feature or headline</small></div>
-                  <div class="pn"><span class="pn-ic">{ICON['bulb']}</span><b>Understand it</b><small>What it really means</small></div>
-                  <div class="pn"><span class="pn-ic">{ICON['sliders']}</span><b>Make it yours</b><small>What fits you</small></div>
-                  <div class="pn"><span class="pn-ic">{ICON['refresh']}</span><b>Keep up</b><small>As it changes</small></div>
+                  <div class="pn on"><span class="pn-ic">{ICON['news']}</span><b>What&rsquo;s new</b><small>Tools, features &amp; headlines</small></div>
+                  <div class="pn"><span class="pn-ic">{ICON['bulb']}</span><b>How it works</b><small>The mechanics, plainly</small></div>
+                  <div class="pn"><span class="pn-ic">{ICON['sliders']}</span><b>How to use it</b><small>Whether it fits you</small></div>
+                  <div class="pn"><span class="pn-ic">{ICON['refresh']}</span><b>How to keep up</b><small>As it keeps changing</small></div>
                 </div>
-                <div class="pipe-detail" id="pipeDetail"><span class="pd-n">01</span><p>A new feature, update or headline appears. What actually happened?</p></div>
+                <div class="pipe-detail" id="pipeDetail"><span class="pd-n">01</span><p>A new tool, feature or development makes the news. We start with the facts: what changed, and why people are talking about it.</p></div>
                 <p class="slide-note">Illustrative: how we work through new developments together.</p>
               </div>
             </div>
@@ -134,16 +134,16 @@ CALL = f"""<div class="hero-visual" id="heroVisual">
 
 VIS_FLOW = """<div class="vis" data-reveal="right">
           <div class="vis-card">
-            <div class="vis-head"><span class="vis-title">Where your assets actually live</span><span class="vis-sub">A core concept</span></div>
+            <div class="vis-head"><span class="vis-title">From hype to understanding</span><span class="vis-sub">A core idea</span></div>
             <div class="flow">
-              <div class="flow-node"><span class="k">Custodial</span><p class="v">Exchange account</p><p class="d">The platform holds the keys for you.</p></div>
+              <div class="flow-node"><span class="k">What you hear</span><p class="v">Headlines &amp; hype</p><p class="d">Fast, loud, and often incomplete.</p></div>
               <div class="flow-mid" aria-hidden="true"><svg viewBox="0 0 46 24"><path d="M2 12h40M36 6l6 6-6 6"/></svg></div>
-              <div class="flow-node you"><span class="k">Self-custody</span><p class="v">Your own wallet</p><p class="d">You hold the keys, and the responsibility.</p></div>
+              <div class="flow-node you"><span class="k">What you understand</span><p class="v">The full picture</p><p class="d">How it works, what it asks of you, and what can go wrong.</p></div>
             </div>
             <div class="keys">
-              <div class="key"><b>Wallets</b><span>How they store access to your assets</span></div>
-              <div class="key"><b>Exchanges</b><span>How buying and selling works</span></div>
-              <div class="key"><b>Market cycles</b><span>Why prices move in phases</span></div>
+              <div class="key"><b>The basics</b><span>How the technology actually works</span></div>
+              <div class="key"><b>The context</b><span>Why it matters, and why now</span></div>
+              <div class="key"><b>The trade-offs</b><span>What it costs in time, money and risk</span></div>
             </div>
           </div>
         </div>"""
@@ -330,6 +330,15 @@ def about():
         <img src="/images/francene.jpg" alt="Francene Loomiller" width="854" height="1280">
         {PORTRAIT_CAP}
       </figure>
+      <!-- Helen's note, word for word from the live impactalphagroup.com -->
+      <div class="partner" data-reveal>
+        <span class="avatar" aria-hidden="true">H</span>
+        <div>
+          <b>Helen Korb</b>
+          <span class="role">Financial Strategy &amp; Operational Excellence</span>
+          <p>Helen brings 25+ years in financial analysis, institutional finance, and compliance &mdash; building the forecasting, reporting, and accountability frameworks that keep complex initiatives visible and on track. Her discipline is the counterweight to momentum: commitments are modeled before they are made, timelines are tested against reality, and every partner knows exactly where an initiative stands. Together they draw on a vetted network of lenders, grant strategists, engineers, and technical advisors, engaged as each initiative requires.</p>
+        </div>
+      </div>
     </div>
     <div>
       <div class="prose" data-stagger>

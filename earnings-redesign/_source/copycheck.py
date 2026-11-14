@@ -10,7 +10,7 @@ SITE = HERE.parent
 ORIGINAL = SITE.parent / "earnings.html"
 PAGES = ["index.html", "about.html", "community.html", "contact.html", "404.html"]
 # illustrative visuals (allowed to have their own labels) and hidden helpers
-SKIP_CLASSES = {"call", "vis", "call-card", "review", "loader", "skip", "topic-panel", "sr-only"}
+SKIP_CLASSES = {"call", "vis", "call-card", "review", "partner", "loader", "skip", "topic-panel", "sr-only"}
 BREAK = {"p", "h1", "h2", "h3", "h4", "li", "a", "button", "label", "small", "b", "span", "div", "figcaption", "br", "option"}
 VOID = {"br", "img", "input", "meta", "link", "hr", "source", "path", "circle", "rect", "line", "stop"}
 
@@ -44,6 +44,11 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def visible_html(src):
+    p = Text(); p.feed(src); p.flush()
+    return [norm(x) for x in p.out if norm(x)]
+
+
 def visible(path):
     p = Text(); p.feed(path.read_text(encoding="utf-8")); p.flush()
     return [norm(x) for x in p.out if norm(x)]
@@ -72,4 +77,14 @@ for page in PAGES:
     for m in dict.fromkeys(missing):
         print("   -", m)
     bad += len(missing)
+# Helen's note (class="partner") is copied from the live Alpha site, so it's
+# checked word for word against ../alpha.html instead.
+alpha = " ".join(visible(SITE.parent / "alpha.html")).replace(" ", "")
+src = (SITE / "about.html").read_text(encoding="utf-8")
+i = src.find('class="partner"')
+if i >= 0:
+    j = src.find("</p>", i)
+    for line in visible_html(src[src.find(">", i) + 1:j]):
+        if line.replace(" ", "") not in alpha:
+            print("about.html (Helen): not on the live Alpha site:", line); bad += 1
 sys.exit(1 if bad else 0)

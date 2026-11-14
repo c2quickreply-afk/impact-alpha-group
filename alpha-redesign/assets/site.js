@@ -152,10 +152,10 @@
     var nodes = $$(".pn", pipe), fill = $(".pipe-fill", pipe), packet = $(".pipe-packet", pipe);
     var detail = document.getElementById("pipeDetail");
     var stepText = [
-      "A new feature, update or headline appears. What actually happened?",
-      "We break it down until it\u2019s clear what it means, and what it doesn\u2019t.",
-      "Then we look at whether it fits your situation at all, and how you\u2019d approach it carefully.",
-      "Things keep changing, so we keep learning together and revisit what we know."
+      "A new tool, feature or development makes the news. We start with the facts: what changed, and why people are talking about it.",
+      "We break down how it actually works: the problem it solves, what it depends on, and where its limits and risks are.",
+      "Then we look at whether it fits your situation at all, and if it does, how to approach it carefully and securely.",
+      "Technology keeps moving, so we track the updates, revisit what we know, and keep learning together."
     ];
     var phase = 0, timer = 0;
     /* The gold dot moves one step at a time with the progress line; after the
